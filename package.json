@@ -1,0 +1,26 @@
+{
+  "name": "lightboot",
+  "version": "1.0.0",
+  "description": "a front end framework",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss/lightboot.scss:dist/css/lightboot.css --watch",
+    "sassMin": "sass src/scss/lightboot.scss:dist/css/lightboot.min.css --watch --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016\u0016https://github.com/LightSpeedGuy/LightBoot.git"
+  },
+  "keywords": [
+    "front-end-framework",
+    "css",
+    "html",
+    "sass",
+    "open-source"
+  ],
+  "author": "Amirhossein",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.39.0"
+  }
+}

@@ -1,0 +1,25 @@
+/*
+ * LightBoot v1.0.0
+ * Author : Amirhossein Mazaheri
+ * Github : https://github.com/LightSpeedGuy/LightBoot.git
+ * Licence : MIT
+ * Copyright 2021 LightBoot
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+:root {
+  @each $title, $value in $themeColors {
+    --#{$rootColorVariablePrefix}-#{$title}: #{$value};
+  }
+}

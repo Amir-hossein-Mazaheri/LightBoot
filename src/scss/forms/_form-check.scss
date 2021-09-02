@@ -1,0 +1,51 @@
+.f-checkbox {
+    display: block;
+    margin-bottom: $formInputMarginBottom;
+
+     &-input {
+         appearance: none;
+         position: relative;
+         display: inline-block;
+         margin-left: $formCheckboxInputMarginLeft;
+     
+         &::before {
+             content: '';
+             width: $formCheckboxInputSize;
+             height: $formCheckboxInputSize;
+             position: absolute;
+             inset: 0;
+             background-color: map-get($themeColors, light);
+             border-radius: $formInputBorderRadius;
+         }
+     
+         &::after {
+             content: '';
+             width: $formCheckboxInputSize;
+             height: $formCheckboxInputSize;
+             position: absolute;
+             inset: 0;
+             background-color: $formCheckboxInputBackgroundColorOnCheck;
+             background-image: url($formCheckboxInputCheckMarkIcon);
+             border-radius: $formInputBorderRadius;
+             display: none;
+         }
+     
+         &:checked:after {
+             display: block;
+         }
+     }
+
+    &-label {
+        vertical-align: text-bottom;
+    }
+
+    &-inline {
+        display: inline-block;
+        margin-left: $formCheckboxInlineMarginLeft;
+
+        &:last-child {
+            margin-left: 0;
+        }
+    }
+}
+

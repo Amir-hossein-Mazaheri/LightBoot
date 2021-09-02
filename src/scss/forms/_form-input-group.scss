@@ -1,0 +1,38 @@
+.f-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: $formInputBorderRadius;
+    margin-bottom: $formInputMarginBottom;
+    border: 1px solid $formInputBorderColor;
+    transition: $formInputTransition;
+
+    &-input {
+        padding: $formInputPadding-x $formInputPadding-y;
+        font-size: $formInputFontSize;
+        line-height: $formInputLineHeight;
+        border: none;
+        flex-grow: 1;
+    }
+
+    &-txt {
+        display: flex;
+        align-items: center;
+        padding: $formGroupTextPadding-x $formGroupTextPadding-y;
+        border-left: 1px solid $formGroupTextBorderLeftColor;
+
+    }
+
+    &:focus,
+    &:focus-within {
+        @include inputOnFocus($formInputShadowColorOnFocus, $formInputBorderColorOnFocus);
+    }
+
+    &-lg {
+        font-size: $formInputLgFontSize + 0.2rem;
+    }
+
+    &-sm {
+        font-size: $formInputSmFontSize - 0.1rem;
+    }
+}

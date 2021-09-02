@@ -1,0 +1,33 @@
+@if $layoutSysFloat == true {
+    .#{$rowClassName}-fl {
+        @include clearfix();
+
+        & > * {
+            --left-gap : #{$columnMarginLeft};
+            --right-gap : #{$columnMarginRight};
+            padding: $sm-spacing * 0.5 $sm-spacing;
+            margin-right: var(--right-gap);
+            margin-left: var(--left-gap);
+            margin-block: var(--y-gap);
+        }
+    }
+
+    @for $i from 1 to $columnSys + 1 {
+        .#{$ColumnPrefix}-#{$i} {
+            float: right;
+            width: calc(#{calculateGridStep() * $i * 1%} - #{$columnMarginRight + $columnMarginLeft});
+        }
+    }
+
+    @each $name,
+    $value in $breakPoints {
+        @include mediaQueryUp($name) {
+            @for $i from 1 to $columnSys + 1 {
+                .#{$ColumnPrefix}-#{$name}-#{$i} {
+                    float: right;
+                    width: calc(#{calculateGridStep() * $i * 1%} - #{$columnMarginRight + $columnMarginLeft});
+                }
+            }
+        }
+    }
+}

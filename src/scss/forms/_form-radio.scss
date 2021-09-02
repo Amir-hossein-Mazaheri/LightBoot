@@ -1,0 +1,50 @@
+.f-radio {
+    display: block;
+    margin-bottom: $formInputMarginBottom;
+
+    &-input {
+        appearance: none;
+        position: relative;
+        display: inline-block;
+        margin-left: $formRadioInputMarginLeft;
+
+        &::before {
+            content: '';
+            width: $formRadioInputSize;
+            height: $formRadioInputSize;
+            position: absolute;
+            inset: 0;
+            background-color: map-get($themeColors, light);
+            border-radius: $formRadioInputBorderRadius ;
+        }
+
+        &::after {
+            content: '';
+            width: $formRadioInputSize;
+            height: $formRadioInputSize;
+            position: absolute;
+            inset: 0;
+            background-color: map-get($themeColors, white);
+            border: $formRadioInputBorderWidthOnCheck solid $formRadioInputBorderColorOnCheck;
+            border-radius: $formRadioInputBorderRadius ;
+            display: none;
+        }
+
+        &:checked:after {
+            display: block;
+        }
+    }
+
+    &-label {
+        vertical-align: text-bottom;
+    }
+
+    &-inline {
+        display: inline-block;
+        margin-left: $formRadioInlineMarginLeft;
+
+        &:last-child {
+            margin-left: 0;
+        }
+    }
+}

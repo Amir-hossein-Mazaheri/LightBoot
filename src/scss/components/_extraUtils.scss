@@ -1,0 +1,134 @@
+//positions
+@each $title, $value in $positions {
+    .#{$positionPrefix}-#{$title} {
+        position: $value !important;
+    }
+}
+
+//floats
+@each $title, $value in $floats {
+    .#{$floatPrefix}-#{$title} {
+        float: $value !important;
+    }
+}
+
+.clearfix {
+    @include clearfix();
+}
+
+//z-index
+@for $i from 1 to $zIndexCount+1 {
+    .#{$zIndexPrefix}-#{$i} {
+        z-index: $zIndexStep * $i !important;
+    }
+}
+
+@if $centeringClasses == true {
+    //centering classes
+    .center-by-pos {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important
+    } /* position relative must be added to parent */
+    
+    .center-x-by-pos {
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    } /* position relative must be added to parent */
+    
+    .center-y-by-pos {
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    } /* position relative must be added to parent */
+}
+
+@if $centeringClassesLimit == limitless{
+
+    .center-by-inset {
+        position: absolute !important;
+        inset: 0 !important;
+        margin: auto !important;
+    }
+
+    .center-by-flex {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    } /* should be added to parent  */
+    
+    .center-x-by-flex {
+        display: flex !important;
+        justify-content: center !important;
+    } /* should be added to parent  */
+    
+    .center-y-by-flex {
+        display: flex !important;
+        align-items: center !important;
+    } /* should be added to parent  */
+    
+    .center-by-grid {
+        display: grid !important;
+        justify-content: center !important;
+        align-items: center !important;
+    } /* should be added to parent  */
+    
+    .center-x-by-grid {
+        display: grid !important;
+        justify-content: center !important;
+    } /* should be added to parent  */
+    
+    .center-y-by-grid {
+        display: grid !important;
+        align-items: center !important;
+    } /* should be added to parent  */
+}
+
+.center-by-flex-child {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: center !important;
+} /* display flex must be added to parent */
+
+.center-y-by-flex-child {
+    align-self: center !important;
+} /* display flex must be added to parent */
+
+
+.smart-img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+//TRBL (top right bottom left)
+@for $i from 1 to $TRBLCount {
+    .t-#{$i * $TRBLStep} {
+        top : $TRBLStep * $i * 1% !important;
+    }
+    .r-#{$i * $TRBLStep} {
+        right : $TRBLStep * $i * 1% !important;
+    }
+    .b-#{$i * $TRBLStep} {
+        bottom: $TRBLStep * $i * 1% !important;
+    }
+    .l-#{$i * $TRBLStep} {
+       left : $TRBLStep * $i * 1% !important;
+    }
+}
+
+//delete before or after element
+.del-before {
+    &::before {
+        display: none;
+    }
+}
+
+.del-after {
+    &::after {
+        display: none;
+    }
+}
+
+

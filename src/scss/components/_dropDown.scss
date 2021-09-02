@@ -1,0 +1,118 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  .dropdown-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: $dropDownButtonGap;
+
+    &::after {
+      display: inline-block;
+      content: "";
+      @include triangle(top, currentColor, 0.3em);
+      margin-top: 0.3rem;
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    min-width: $dropDownMenuMinWidth;
+    width: max-content;
+    border-radius: $dropDownMenuBorderRadius;
+    background-color: white;
+    margin-top: $dropDownMenuMarginTop ;
+    margin-bottom: $dropDownMenuMarginBottom;
+    box-shadow: 0 0 5px $dropDownMenuShadowColor;
+    transform: scaleY(0);
+    transform-origin: $dropDownTransformOrigin;
+    opacity: 0;
+    transition: $dropDownShowTransition;
+    z-index: 1000;
+
+    li {
+      cursor: pointer;
+      padding: $dropDownMenuLiPadding-x $dropDownMenuLiPadding-y;
+      border-bottom: $dropDownMenuLiBorderWidth $dropDownMenuLiBorderType $dropDownMenuLiBorderBottomColor;
+      display: block;
+      transition: $dropDownMenuLiTransition;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background-color: $dropDownMenuLiBackgroundColorOnHover;
+      }
+    }
+  }
+
+  &-right {
+    .dropdown-menu {
+      left: 100%;
+      top: 0;
+      right: unset;
+      margin-left: 0.3rem;
+      margin-top: 0;
+    }
+
+    .dropdown-button {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: inline-block;
+        content: "";
+        @include triangle(top, currentColor, 0.3em);
+        margin-top: 0;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &-left {
+    .dropdown-menu {
+      right: 100%;
+      top: 0;
+      left: unset;
+      margin-right: 0.3rem;
+      margin-top: 0;
+    }
+
+    .dropdown-button {
+      &::after {
+        transform: rotate(90deg);
+        margin-top: 0;
+      }
+    }
+  }
+
+  &-top {
+    .dropdown-menu {
+      top: unset;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      margin-bottom: 0.25rem;
+      margin-top: 0;
+    }
+
+    .dropdown-button {
+      &::after {
+        transform: rotate(180deg);
+        margin-top: -0.3rem;
+      }
+    }
+  }
+
+  &-show {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: $dropDownShowTransition;
+  }
+}

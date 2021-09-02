@@ -1,0 +1,69 @@
+@use "vars";
+
+//media queries
+//! note : these two mixins simplify usage of media queries
+@mixin mediaQueryUp($BP) {
+
+    @each $name,
+    $value in $breakPoints {
+        @if $BP==$name {
+            @media screen and (min-width : $value) {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin mediaQueryDown($BP) {
+
+    @each $name,
+    $value in $breakPoints {
+        @if $BP==$name {
+            @media screen and (max-width : $value) {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin typo($family, $height, $weight) {
+    font-family: $family;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+// for typography
+
+@mixin gradient($direction : to left, $color1, $color2) {
+    background-image: linear-gradient($direction, $color1, $color2);
+}
+
+@mixin clearfix() {
+    &::after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+}
+
+@mixin inputStyle($padding, $MB, $FS, $LH, $BC, $BR) {
+    width: 100%;
+    display: block;
+    padding: $padding;
+    margin-bottom: $MB;
+    font-size: $FS;
+    line-height: $LH;
+    border: 1px solid $BC;
+    border-radius: $BR;
+}
+
+@mixin inputOnFocus($shadowColor, $borderColor) {
+    box-shadow: 0 0 7px 2px $shadowColor;
+    border: 1px solid $borderColor;
+}
+
+//make triangle by using border
+@mixin triangle($dir, $color, $size) {
+    border: $size solid transparent;
+    border-#{$dir}-color: $color;
+}

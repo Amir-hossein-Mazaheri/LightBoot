@@ -1,0 +1,121 @@
+.nvb {
+    position: relative;
+    padding: 1.1em;
+
+    .navbar {
+        display: block;
+        align-items: center;
+        font-size: 1.1rem;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: $navbarMobileToggleDelay;
+
+        .navbar-item {
+            color: scale-color(map-get($themeColors, white), $blackness: 8%);
+            text-decoration: none;
+            padding: 0.6em 1.3em;
+            transition: 0.2s;
+
+            &:hover {
+                color: map-get($themeColors, white);
+            }
+        }
+
+        &-logo {
+            display: inline-block;
+            position: static;
+            transform: none;
+            max-width: 100%;
+            color: map-get($themeColors, black);
+            height: fit-content;
+            align-self: center;
+
+            &:hover img {
+                filter: grayscale(45%);
+            }
+        }
+
+        &-mobile-bars {
+            position: absolute;
+            top: 0;
+            left: 3%;
+            line-height: 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    }
+
+    &-light {
+        color: map-get($themeColors, dark);
+
+        .navbar {
+            .navbar-item {
+                color: scale-color(map-get($themeColors, black), $lightness: 50%);
+    
+                &:hover {
+                    color: map-get($themeColors, black);
+                }
+
+                &-logo {
+                    color: map-get($themeColors, black);
+                }
+
+                &-mobile-bars {
+                    color: map-get($themeColors, black);
+                }
+            }
+        }
+    }
+
+    .dropdown .dropdown-menu {
+        min-width: 100%;
+    }
+}
+
+// class for javascript toggle
+.navbar-active {
+    height: 100% !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: $navbarMobileToggleDelay !important;
+}
+
+
+//* navbar behavior for small screen sizes
+@if $navbarMobileBehavior==true {
+    @include mediaQueryUp(md) {
+        .nvb {
+            display: block;
+
+            .navbar-mobile-bars {
+                display: none;
+            }
+
+            .navbar {
+                display: inline-flex;
+                margin: 0;
+                height: 100%;
+                opacity: 1;
+                visibility: visible;
+
+                &-logo {
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin-left: 2em;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .dropdown .dropdown-menu {
+            min-width: calc(100% + 2rem) !important;
+        }
+    }
+
+}

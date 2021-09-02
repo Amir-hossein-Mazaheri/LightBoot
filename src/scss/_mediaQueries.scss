@@ -1,0 +1,385 @@
+@each $name, $value in $breakPoints {
+    @include mediaQueryUp($name) {
+        //------------------------------------spacings------------------------------------//
+        @if $responsiveSpacingClasses == true {
+        //paddings
+        //padding child
+        @if $responsiveSpacingClassesLimit == limitless {
+            @for $i from 0 to map-get($spacingRange, padding) {
+                .p-#{$name}-child-#{$i}>* {
+                    padding: $sm-spacing * $i;
+                }
+            }
+    
+            @for $i from 0 to map-get($spacingRange, padding) {
+                .pr-#{$name}-child-#{$i}>* {
+                    padding-right: $sm-spacing * $i;
+                }
+            }
+    
+            @for $i from 0 to map-get($spacingRange, padding) {
+                .pl-#{$name}-child-#{$i}>* {
+                    padding-left: $sm-spacing * $i;
+                }
+            }
+    
+            @for $i from 0 to map-get($spacingRange, padding) {
+                .pt-#{$name}-child-#{$i}>* {
+                    padding-top: $sm-spacing * $i;
+                }
+            }
+    
+            @for $i from 0 to map-get($spacingRange, padding) {
+                .pb-#{$name}-child-#{$i}>* {
+                    padding-bottom: $sm-spacing * $i;
+                }
+            }
+    
+            @for $i from 0 to map-get($spacingRange, padding) {
+                .py-#{$name}-child-#{$i}>* {
+                    padding-bottom: $sm-spacing * $i;
+                    padding-top: $sm-spacing * $i;
+                }
+            }
+    
+            @for $i from 0 to map-get($spacingRange, padding) {
+                .px-#{$name}-child-#{$i}>* {
+                    padding-right: $sm-spacing * $i;
+                    padding-left: $sm-spacing * $i;
+                }
+            }
+        }
+
+        //normal paddings
+        @for $i from 0 to map-get($spacingRange, padding) {
+            .p-#{$name}-#{$i} {
+                padding: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 0 to map-get($spacingRange, padding) {
+            .pr-#{$name}-#{$i} {
+                padding-right: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 0 to map-get($spacingRange, padding) {
+            .pl-#{$name}-#{$i} {
+                padding-left: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 0 to map-get($spacingRange, padding) {
+            .pt-#{$name}-#{$i} {
+                padding-top: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 0 to map-get($spacingRange, padding) {
+            .pb-#{$name}-#{$i} {
+                padding-bottom: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 0 to map-get($spacingRange, padding) {
+            .py-#{$name}-#{$i} {
+                padding-bottom: $sm-spacing * $i;
+                padding-top: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 0 to map-get($spacingRange, padding) {
+            .px-#{$name}-#{$i} {
+                padding-right: $sm-spacing * $i;
+                padding-left: $sm-spacing * $i;
+            }
+        }
+
+        //margins
+        //margin child
+        @if $responsiveSpacingClassesLimit == limitless {
+            @for $i from 0 to map-get($spacingRange, margin) {
+                .m-#{$name}-child-#{$i}>* {
+                    margin: $sm-spacing * $i;
+                }
+            }
+    
+            @for $i from 0 to map-get($spacingRange, margin) {
+                .mr-#{$name}-child-#{$i}>* {
+                    margin-right: $sm-spacing * $i;
+                }
+            }
+    
+            @for $i from 0 to map-get($spacingRange, margin) {
+                .ml-#{$name}-child-#{$i}>* {
+                    margin-left: $sm-spacing * $i;
+                }
+            }
+    
+            @for $i from 0 to map-get($spacingRange, margin) {
+                .mt-#{$name}-child-#{$i}>* {
+                    margin-top: $sm-spacing * $i;
+                }
+            }
+    
+            @for $i from 0 to map-get($spacingRange, margin) {
+                .mb-#{$name}-child-#{$i}>* {
+                    margin-bottom: $sm-spacing * $i;
+                }
+            }
+    
+            @for $i from 0 to map-get($spacingRange, margin) {
+                .my-#{$name}-child-#{$i}>* {
+                    margin-bottom: $sm-spacing * $i;
+                    margin-top: $sm-spacing * $i;
+                }
+            }
+    
+            @for $i from 0 to map-get($spacingRange, margin) {
+                .mx-#{$name}-child-#{$i}>* {
+                    margin-right: $sm-spacing * $i;
+                    margin-left: $sm-spacing * $i;
+                }
+            }
+        }
+
+        //normal margins
+        @for $i from 0 to map-get($spacingRange, margin) {
+            .m-#{$name}-#{$i} {
+                margin: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 0 to map-get($spacingRange, margin) {
+            .mr-#{$name}-#{$i} {
+                margin-right: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 0 to map-get($spacingRange, margin) {
+            .ml-#{$name}-#{$i} {
+                margin-left: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 0 to map-get($spacingRange, margin) {
+            .mt-#{$name}-#{$i} {
+                margin-top: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 0 to map-get($spacingRange, margin) {
+            .mb-#{$name}-#{$i} {
+                margin-bottom: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 0 to map-get($spacingRange, margin) {
+            .my-#{$name}-#{$i} {
+                margin-bottom: $sm-spacing * $i;
+                margin-top: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 0 to map-get($spacingRange, margin) {
+            .mx-#{$name}-#{$i} {
+                margin-right: $sm-spacing * $i;
+                margin-left: $sm-spacing * $i;
+            }
+        }
+
+        @if $responsiveSpacingClassesLimit == limitless {
+            //auto margins
+            .mr-#{$name}-auto {
+                margin-right: auto;
+            }
+
+            .ml-#{$name}-auto {
+                margin-left: auto;
+            }
+
+            .mt-#{$name}-auto {
+                margin-top: auto;
+            }
+
+            .mb-#{$name}-auto {
+                margin-bottom: auto;
+            }
+
+            .mx-#{$name}-auto {
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .my-#{$name}-auto {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+
+        //gap
+        @for $i from 1 to map-get($spacingRange, gap)+1 {
+            .gap-#{$name}-#{$i} {
+                gap: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 1 to map-get($spacingRange, gap)+1 {
+            .gap-#{$name}-r-#{$i} {
+                row-gap: $sm-spacing * $i;
+            }
+        }
+
+        @for $i from 1 to map-get($spacingRange, gap)+1 {
+            .gap-#{$name}-c-#{$i} {
+                column-gap: $sm-spacing * $i;
+            }
+        }
+    }
+
+    //------------------------------------displays------------------------------------//
+        @if $responsiveDisplayClasses == true {
+            
+            @each $title, $value in $displays {
+                .#{$displayPrefix}-#{$name}-#{$title}{
+                    display: $value !important;
+                }
+            }  
+            
+            @if $responsiveDisplayClassesLimit == limitless {
+                @each $title, $value in $justify-content {
+                    .#{$displayPrefix}-#{$name}-jc-#{$title}{
+                        justify-content: $value !important;
+                    }
+                } 
+                
+                @each $title, $value in $align-items {
+                    .#{$displayPrefix}-#{$name}-ai-#{$title}{
+                        align-items: $value !important;
+                    }
+                } 
+    
+                @each $title, $value in $align-self {
+                    .#{$displayPrefix}-#{$name}-as-#{$title}{
+                        align-self: $value !important;
+                    }
+                }
+                
+                @each $title, $value in $align-content {
+                    .#{$displayPrefix}-#{$name}-ac-#{$title}{
+                        align-content: $value !important;
+                    }
+                } 
+                
+                @each $title, $value in $flex-wrap {
+                    .#{$displayPrefix}-#{$name}-#{$title}{
+                        flex-wrap: $value !important;
+                    }
+                }
+                
+                @each $title, $value in $flex-dir {
+                    .#{$displayPrefix}-#{$name}-#{$title}{
+                        flex-direction: $value !important;
+                    }
+                }
+    
+            }
+        }
+
+    //------------------------------------typography------------------------------------//
+        @if $responsiveTypographyClasses == true {
+
+            @for $i from 1 to $headingCount + 1 {
+                .#{$headingPrefix}-#{$name}-#{$i} {
+                @include typo(
+                    map-get($headingFont, font-family), 
+                    map-get($headingFont, line-height), 
+                    map-get($headingFont, font-weight)
+                );
+                font-size: map-get($headingFont, font-size) * ($i + 1) !important;
+                }
+            }
+            
+    
+            @for $i from 1 to $fsCount + 1 {
+                .#{$fsPrefix}-#{$name}-#{$i} {
+                @include typo(
+                    map-get($defaultFont, font-family), 
+                    map-get($defaultFont, line-height), 
+                    map-get($defaultFont, font-weight)
+                );
+                font-size: map-get($defaultFont, font-size) * ($i) !important;
+                }
+            }
+            
+            @if $responsiveTypographyClassesLimit == limitless {
+                @each $title, $value in $themeColors {
+                    .#{$textPrefix}-#{$name}-#{$title}{
+                        color: $value !important;
+                    }
+                }
+                
+                @each $title, $value in $txtAligns {
+                    .#{$textPrefix}-#{$name}-align-#{$title}{
+                        text-align: $value !important;
+                    }
+                }
+                
+                @each $title, $value in $txtDir {
+                    .#{$textPrefix}-#{$name}-dir-#{$title}{
+                        direction: $value !important;
+                    }
+                }
+            }
+
+        }
+
+    //------------------------------------backgrounds------------------------------------//
+        @if $responsiveBackgroundClasses == true {
+            @each $title, $value in $themeColors {
+                .#{$backgroundPrefix}-#{$name}-#{$title}{
+                    background-color: $value !important;
+                }
+            }
+        }
+    
+    //------------------------------------box sizings------------------------------------//
+
+        @if $responsiveBoxSizingClasses == true {
+            @for $i from 1 to $boxSizingCount + 1 {
+
+                .w-#{$name}-#{$i * $boxSizingStep}{
+                    width: ($i * $boxSizingStep ) * 1%  !important;
+                }
+            
+                .min-w-#{$name}-#{$i * $boxSizingStep}{
+                    min-width: ($i * $boxSizingStep ) * 1%  !important;
+                }
+            
+                .max-w-#{$name}-#{$i * $boxSizingStep}{
+                    max-width: ($i * $boxSizingStep ) * 1%  !important;
+                }
+            
+            }
+        }
+        
+    //------------------------------------borders------------------------------------//
+        @if $responsiveBorderClasses == true {
+            @each $title, $value in $borders {
+                .#{$borderPrefix}-#{$title}{
+                    border: $value solid $defaultBorderColor;
+                }
+            }
+            
+            @each $title, $value in $themeColors {
+                .#{$borderPrefix}-#{$title}{
+                    border-color: $value;
+                }
+            }
+        }
+
+    }
+}
+
+
+

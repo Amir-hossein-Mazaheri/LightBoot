@@ -1,0 +1,41 @@
+.f-control {
+    @include inputStyle($formInputPadding-x $formInputPadding-y, $formInputMarginBottom, $formInputFontSize, $formInputLineHeight, $formInputBorderColor, 5px);
+    transition: $formInputTransition;
+    
+    &-label {
+        display: inline-block;
+        margin-bottom: $formControlLabelMarginBottom;
+        margin-right: $formControlLabelMarginRight;
+    }
+
+    &::placeholder {
+        color: $formControlPlaceHolderColor;
+    }
+
+    &:hover::placeholder {
+        color: $formControlPlaceHolderColorOnHover;
+    }
+
+    &:focus {
+        @include inputOnFocus($formInputShadowColorOnFocus, $formInputBorderColorOnFocus);
+    }
+
+    &:disabled,
+    &:read-only {
+        background-color: $formControlBackgroundColorOnDisabled;
+    }
+
+    &:disabled::placeholder,
+    &:read-only::placeholder {
+        color: $formControlBackgroundColorOnDisabledHover;
+    }
+
+    &-lg {
+        font-size: $formInputLgFontSize;
+    }
+
+    &-sm {
+        font-size: $formInputSmFontSize;
+    }
+}
+

@@ -1,0 +1,56 @@
+.tab {
+
+    .tab-heading {
+        cursor: pointer;
+        border-bottom: $tabItemActiveBorderWidth $tabItemActiveBorderType $tabItemActiveBorderColor;
+        width: 100%;
+
+        .tab-item {
+            display: inline-block;
+            font-size: $tabItemFontSize;
+            padding: $tabItemPadding-x $tabItemPadding-y;
+
+            &:not(.active) {
+                border: none;
+                background-color: transparent;
+            }
+
+            transition: 0.2s;
+            cursor: pointer;
+            border-radius: $tabItemActiveBorderRadius $tabItemActiveBorderRadius 0 0;
+            background-color: white;
+            border-top: $tabItemActiveBorderWidth $tabItemActiveBorderType $tabItemActiveBorderColor;
+            border-right: $tabItemActiveBorderWidth $tabItemActiveBorderType $tabItemActiveBorderColor;
+            border-bottom: $tabItemActiveBorderWidth $tabItemActiveBorderType map-get($themeColors, white);
+            border-left: $tabItemActiveBorderWidth $tabItemActiveBorderType $tabItemActiveBorderColor;
+            margin-bottom: -$tabItemActiveBorderWidth;
+
+            .tab-link {
+                cursor: pointer;
+                text-decoration: none;
+                color: $tabLinkColor;
+            }
+        }
+    }
+
+    .tab-body {
+        padding: $tabBodyPadding-x $tabBodyPadding-y;
+
+        .tab-content {
+            position: static;
+            line-height: $tabContentLineHeight;
+            opacity: 1;
+            transition: $tabContentChangeDelay;
+            transform: translateX(0);
+
+            &:not(.active) {
+                position: absolute;
+                opacity: 0;
+                transition: $tabContentChangeDelay;
+                transform: translateX(100vw);
+            }
+        }
+
+    }
+
+}

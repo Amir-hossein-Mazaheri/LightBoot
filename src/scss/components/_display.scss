@@ -1,0 +1,44 @@
+@each $name, $value in $displays {
+    .#{$displayPrefix}-#{$name}{
+        display: $value !important;
+    }
+}  
+
+@each $name, $value in $justify-content {
+    .#{$displayPrefix}-jc-#{$name}{
+        justify-content: $value !important;
+    }
+} 
+
+@each $name, $value in $align-items {
+    .#{$displayPrefix}-ai-#{$name}{
+        align-items: $value !important;
+    }
+} 
+
+@each $name, $value in $align-content {
+    .#{$displayPrefix}-ac-#{$name}{
+        align-content: $value !important;
+    }
+} 
+
+@each $name, $value in $align-self {
+    .#{$displayPrefix}-as-#{$name}{
+        align-self: $value !important;
+    }
+}
+ 
+@each $name, $value in $flex-wrap {
+    .#{$displayPrefix}-#{$name}{
+        flex-wrap: $value !important;
+    }
+}
+
+@each $name, $value in $flex-dir {
+    .#{$displayPrefix}-#{$name}{
+        flex-direction: $value !important;
+    }
+}
+
+
+

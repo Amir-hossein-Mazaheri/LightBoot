@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+*,
+body {
+  font-family: $fontFamily;
+}
+
+%display {
+  @include typo(
+    map-get($headingFont, font-family),
+    map-get($headingFont, line-height),
+    map-get($headingFont, font-weight)
+  );
+  margin-bottom: 0.58em;
+}
+
+@for $i from 1 to $headingCount + 1 {
+  .#{$headingPrefix}-#{$i} {
+    @extend %display;
+    font-size: map-get($headingFont, font-size) *
+      (($headingCount + 1) - $i) !important;
+  }
+}
+
+//smart heading classes resize based on device width
+@for $i from 1 to $headingCount + 1 {
+  .smart-#{$headingPrefix}-#{$i} {
+    @extend %display;
+    font-size: map-get($headingFont, font-size) *
+      0.68 *
+      (($headingCount + 1) - $i) !important;
+
+    @include mediaQueryUp(md) {
+      font-size: map-get($headingFont, font-size) * 0.8 *
+        (($headingCount + 1) - $i) !important;
+    }
+
+    @include mediaQueryUp(lg) {
+      font-size: map-get($headingFont, font-size) * (($headingCount + 1) - $i) !important;
+    }
+  }
+}
+
+%fs {
+  @include typo(
+    map-get($defaultFont, font-family),
+    map-get($defaultFont, line-height),
+    map-get($defaultFont, font-weight)
+  );
+  margin-bottom: 0.4em;
+}
+
+@for $i from 1 to $fsCount + 1 {
+  .#{$fsPrefix}-#{$i} {
+    @extend %fs;
+    font-size: map-get($defaultFont, font-size) *
+      (($fsCount + 1) -$i) !important;
+  }
+}
+
+@for $i from 1 to $fsCount + 1 {
+  .smart-#{$fsPrefix}-#{$i} {
+    @extend %fs;
+    font-size: map-get($headingFont, font-size) *
+      0.71 *
+      (($headingCount + 1) - $i) !important;
+
+    @include mediaQueryUp(md) {
+      font-size: map-get($headingFont, font-size) * 0.83 *
+        (($headingCount + 1) - $i) !important;
+    }
+
+    @include mediaQueryUp(lg) {
+      font-size: map-get($headingFont, font-size) * (($headingCount + 1) - $i) !important;
+    }
+  }
+}
+
+@each $name, $value in $themeColors {
+  .#{$textPrefix}-#{$name} {
+    color: $value !important;
+  }
+}
+
+@each $name, $value in $txtAligns {
+  .#{$textPrefix}-align-#{$name} {
+    text-align: $value !important;
+  }
+}
+
+@each $name, $value in $txtDir {
+  .#{$textPrefix}-dir-#{$name} {
+    direction: $value !important;
+  }
+}
+
+//some extra utilities
+//line height
+.#{$lineHeightPrefix}-base {
+  line-height: 1.4;
+}
+
+.#{$lineHeightPrefix}-lg {
+  line-height: 1.7;
+}
+
+.#{$lineHeightPrefix}-xl {
+  line-height: 2;
+}
+
+.#{$lineHeightPrefix}-xxl {
+  line-height: 2.5;
+}
+//font font-weight
+.#{$fontWeightPrefix}-thin {
+  font-weight: 100;
+}
+
+.#{$fontWeightPrefix}-light {
+  font-weight: 300;
+}
+
+.#{$fontWeightPrefix}-medium {
+  font-weight: 400;
+}
+
+.#{$fontWeightPrefix}-bold {
+  font-weight: 700;
+}
+
+.#{$fontWeightPrefix}-black {
+  font-weight: 900;
+}
+
+//for persian fonts
+.to-persian-numbers {
+  -moz-font-feature-settings: "ss02";
+  -webkit-font-feature-settings: "ss02";
+  font-feature-settings: "ss02";
+}
+
+//for persian fonts
+.monospace-numbers {
+  -moz-font-feature-settings: "ss03";
+  -webkit-font-feature-settings: "ss03";
+  font-feature-settings: "ss03";
+}
+
+//LightBoot default styles for code, kbd, mark, blockquote, abbr,and address  tags
+code,
+kbd {
+  background-color: scale-color(map-get($themeColors, black), $whiteness: 20%);
+  padding: 0.2em 0.5em;
+  color: map-get($themeColors, white);
+  border-radius: 3px;
+  letter-spacing: 1px;
+  margin: 0 0.33rem;
+  direction: ltr;
+}
+
+mark {
+  background-color: scale-color($primary, $lightness: 30%);
+  padding: 0 0.34rem;
+  border-radius: 3px;
+}
+
+blockquote {
+  line-height: 1.7;
+
+  &::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' viewBox='0 0 15 15'%3E%3Cpath fill='#{rgba(#fff, 1)}'  d='M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z'%3E%3C/path%3E%3C/svg%3E");
+    background-color: scale-color($primary, $lightness: 0%);
+    width: 3rem;
+    height: 3rem;
+    float: right;
+    margin-left: 0.7rem;
+    border-radius: 3px;
+  }
+}
+
+abbr {
+  text-decoration: underline 2px double $primary;
+  font-family: cursive;
+  font-weight: 600;
+  padding: 0.3em;
+  text-transform: uppercase;
+}
+
+address {
+  line-height: 2;
+  font-style: italic;
+}

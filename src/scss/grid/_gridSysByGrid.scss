@@ -1,0 +1,30 @@
+@if $layoutSysGrid == true {
+    .#{$rowClassName}-g {
+        display: grid;
+
+        & > * {
+            --left-gap : #{$columnMarginLeft};
+            --right-gap : #{$columnMarginRight};
+            padding: $sm-spacing * 0.5 $sm-spacing;
+            margin-right: var(--right-gap);
+            margin-left: var(--left-gap);
+        }
+    }
+
+    @for $i from 1 to $columnSys + 1 {
+        .#{$GColumnPrefix}-#{$i} {
+            grid-template-columns: repeat($i, 1fr);
+        }
+    }
+
+    @each $name,
+    $value in $breakPoints {
+        @include mediaQueryUp($name) {
+            @for $i from 1 to $columnSys + 1 {
+                .#{$GColumnPrefix}-#{$name}-#{$i} {
+                    grid-template-columns: repeat($i, 1fr);
+                }
+            }
+        }
+    }
+}

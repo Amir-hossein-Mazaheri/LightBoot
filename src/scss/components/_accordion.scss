@@ -1,0 +1,61 @@
+.accordion {
+    border: $accordionBorderWidth $accordionBorderType $accordionBorderColor;
+    border-radius: $accordionBorderRadius;
+    overflow: hidden;
+}
+
+.accordion-item {
+    .accordion-heading {
+        font-size: $accordionHeadingFontSize;
+        padding: $accordionHeadingPadding-x $accordionHeadingPadding-y;
+        position: relative;
+        color: $accordionHeadingColorOnActive;
+        background-color: $accordionHeadingBackgroundColorOnActive;
+        border-bottom: $accordionHeadingBorderWidth $accordionHeadingBorderType $accordionHeadingBorderColor;
+        border-top: $accordionHeadingBorderWidth $accordionHeadingBorderType $accordionHeadingBorderColor;
+        cursor: pointer;
+        transition: $accordionHeadingTransition;
+
+        &:not(.active) {
+            color: $accordionHeadingColor;
+            background-color: $accordionHeadingBackgroundColor;
+        }
+
+        &:first-child {
+            border-top: none;
+        }
+
+        &:not(.active):after {
+            content: url($accordionHeadingIcon);
+        }
+
+        &::after {
+            content: url($accordionHeadingIconOnActive);
+            width: $accordionHeadingIconWidth;
+            height: $accordionHeadingIconHeight;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: $accordionHeadingIconLeft;
+            transform: translateY(-50%);
+            transition: $accordionHeadingTransition;
+        }
+    }
+
+    .accordion-content {
+        
+        & > * {
+            padding: $accordionContentPadding-x $accordionContentPadding-y;
+            border-bottom: $accordionContentBorderWidth $accordionContentBorderType $accordionContentBorderColor ;
+            line-height: $accordionContentLineHeight;
+            height: 100%;
+            transition: $accordionContentTransition;
+        }
+
+        &:not(.active) {
+            transition: $accordionContentTransition;
+            overflow: hidden;
+            display: none;
+        }
+    }
+}

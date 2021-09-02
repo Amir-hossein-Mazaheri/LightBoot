@@ -1,0 +1,43 @@
+.f-floating {
+    position: relative;
+
+    &-input {
+        @include inputStyle($formInputPadding-x $formInputPadding-y, $formInputMarginBottom, $formInputFontSize, $formInputLineHeight, $formInputBorderColor, 5px);
+        height: $formFloatingInputHeight;
+        transition: $formInputTransition;
+
+        &::placeholder {
+            color: $formFloatingInputPlaceHolderColor;
+        }
+
+        &:focus {
+            @include inputOnFocus($formInputShadowColorOnFocus, $formInputBorderColorOnFocus);
+        }
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            padding: $formFloatingInputPaddingSetOnFocus;
+        }
+
+        &:placeholder-shown+label {
+            position: absolute;
+            top: 50%;
+            right: $formFloatingLabelRight;
+            pointer-events: none;
+            transform: translateY(-50%);
+            transition: $formInputTransition;
+        }
+
+        &:focus+label, &:not(:placeholder-shown)+label {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translate($formFloatingLabelTransitionOnFocus-x, $formFloatingLabelTransitionOnFocus-y);
+            font-size: $formFloatingLabelFontSizeOnFocus;
+            font-weight: $formFloatingLabelFontWeightOnFocus;
+            color: $formFloatingLabelColorOnFocus;
+            transition: $formInputTransition;
+        }
+    }
+
+}

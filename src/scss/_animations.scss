@@ -1,0 +1,26 @@
+//LightBoot uses some animation from animate.css library
+@import "animations/base/_vars";
+@import "animations/base/_base";
+
+/* Fading entrances  */
+@import "animations/fading_entrances/fadeIn";
+@import "animations/fading_entrances/fadeInDown";
+@import "animations/fading_entrances/fadeInLeft";
+@import "animations/fading_entrances/fadeInRight";
+@import "animations/fading_entrances/fadeInUp";
+@import "animations/fading_entrances/fadeInTopLeft";
+@import "animations/fading_entrances/fadeInTopRight";
+@import "animations/fading_entrances/fadeInBottomLeft";
+@import "animations/fading_entrances/fadeInBottomRight";
+
+/* Specials */
+@import "animations/specials/jackInTheBox";
+
+/* Zooming entrances */
+@import "animations/zooming_entrances/zoomIn";
+
+/* Sliding entrances */
+@import "animations/sliding_entrances/slideInDown";
+@import "animations/sliding_entrances/slideInLeft";
+@import "animations/sliding_entrances/slideInRight";
+@import "animations/sliding_entrances/slideInUp";

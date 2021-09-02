@@ -1,0 +1,60 @@
+@keyframes bubbling {
+    0% {
+        transform: scale(1);
+        opacity: 0.20;
+    }
+
+    25% {
+        transform: scale(1.15);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(1.30);
+        opacity: 0.6;
+    }
+
+    75% {
+        transform: scale(1.45);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.6);
+        opacity: 1;
+    }
+}
+
+.prePageLoader {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(black, 0.83);
+    z-index: 1800;
+    opacity: 1;
+    transition: 0.3s;
+
+    &::before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{rgba(white, 0.98)}' class='bi bi-circle' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3C/svg%3E");
+        display: block;
+        width: 3.5rem;
+        height: 3.5rem;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: bubbling 0.7s linear 0s infinite;
+        color: white;
+        white-space: nowrap;
+    }
+
+    &::after {
+        content: 'در حال بارگذاری...';
+        position: absolute;
+        top: 50%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.7rem;
+        opacity: 0.87;
+    }
+}

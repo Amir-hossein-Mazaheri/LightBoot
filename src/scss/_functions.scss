@@ -1,0 +1,3 @@
+@function calculateGridStep() {
+    @return 100 / $columnSys;
+}

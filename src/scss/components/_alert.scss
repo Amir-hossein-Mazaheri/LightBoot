@@ -1,0 +1,65 @@
+%alert {
+    padding: $alertPadding-y $alertPadding-x;
+    border-radius: $alertBorderRadius;
+    font-size: $alertFontSize;
+    direction: $alertDirection;
+    line-height: 1.65;
+    position: relative;
+}
+
+@each $colorName,
+$hex in $themeColors {
+    .#{$alertPrefix}-#{$colorName} {
+        @extend %alert;
+        background-color: $hex;
+
+        @if lightness($hex) < 80 {
+            color: map-get($themeColors, white);
+        }
+    }
+}
+
+.#{$alertPrefix}-lg {
+    font-size: 1.15rem;
+}
+
+.#{$alertPrefix}-sm {
+    font-size: 0.85rem;
+}
+
+//special alerts
+@each $colorName, $hex in $alertSpecials {
+    .#{$alertPrefix}-#{$colorName} {
+        @extend %alert;
+        background-color: $hex;
+
+        @if lightness($hex) < 80 {
+            color: map-get($themeColors, white);
+        }
+
+        &::after {
+            content: url(map-get($alertSpecialIcons, $colorName));
+            position: absolute;
+            top: 50%;
+            left: 2em;
+            transform: translateY(-50%) scale(2);
+            line-height: 0;
+        }
+
+    }
+}
+
+.#{$alertPrefix}-with-close {
+    padding-right: 4.5em;
+
+    &::after {
+        right: 2em;
+        left: unset;
+    }
+
+    & > .close-button {
+        &::after {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='#{rgba(white,.9)}' d='M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z'%3E%3C/path%3E%3C/svg%3E");
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.f-select {
+    @include inputStyle($formInputPadding-x $formInputPadding-y, $formInputMarginBottom, $formInputFontSize, $formInputLineHeight, $formInputBorderColor, 5px);
+    appearance: none;
+    background-image: $formSelectBackgroundImage ;
+    background-repeat: no-repeat;
+    background-position: $formSelectBackgroundImagePosition;
+    background-size: $formSelectBackgroundImageSize;
+    transition: $formInputTransition;
+
+    &:focus {
+        @include inputOnFocus($formInputShadowColorOnFocus, $formInputBorderColorOnFocus);
+    }
+
+    &-lg {
+        font-size: $formInputLgFontSize;
+    }
+
+    &-sm {
+        font-size: $formInputSmFontSize;
+    }
+}

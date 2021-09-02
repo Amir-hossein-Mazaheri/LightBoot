@@ -1,0 +1,629 @@
+//?------------------------------------column system------------------------------------//
+$columnSys: 12 !default; //can also be replace with any number you prefer
+
+//layout types
+$layoutSysFlex: true !default;
+$layoutSysGrid: true !default;
+$layoutSysFloat: false !default;
+//* any of these 3 variables can be set to 'true'
+//! note : if you set float to 'true' legacy browsers won't be supported! only grid system will be supported
+// if you set flex and float to true float will override
+
+// row class name
+$rowClassName: "wrapper" !default;
+
+//if layout sys set to grid
+$GColumnPrefix: "column" !default;
+
+//if layout sys set to flex or float
+$ColumnPrefix: "col" !default;
+
+//if layout sys set to flex or float
+$columnMarginRight: 0.3rem !default;
+$columnMarginLeft: $columnMarginRight !default;
+
+//if layout sys set to float
+$columnMargin-y: 1.3rem !default; // for flex or grid you can use gap column classes
+
+// breakpoints
+$breakPoints: (
+  sm: 36em,
+  md: 48em,
+  lg: 62em,
+  // xl: 75em
+) !default; //numbers are changeable also you can add breakpoint(s)
+//! note : its better to keep unit em
+
+//?------------------------------------displays------------------------------------//
+
+//display types
+$displays: (
+  g: grid,
+  f: flex,
+  ig: inline-grid,
+  if: inline-flex,
+  b: block,
+  ib: inline-block,
+  i: inline,
+  n: none,
+) !default;
+
+//display classes prefix
+$displayPrefix: "dis" !default;
+
+//flex properties
+$justify-content: (
+  s: flex-start,
+  e: flex-end,
+  b: baseline,
+  c: center,
+  r: right,
+  l: left,
+  sa: space-around,
+  sb: space-between,
+  se: space-evenly,
+  st: stretch,
+) !default;
+
+$align-items: (
+  s: flex-start,
+  e: flex-end,
+  b: baseline,
+  c: center,
+  st: stretch,
+) !default;
+
+$align-content: (
+  s: flex-start,
+  e: flex-end,
+  b: baseline,
+  c: center,
+  sa: space-around,
+  sb: space-between,
+  st: stretch,
+) !default;
+
+$align-self: (
+  s: flex-start,
+  e: flex-end,
+  b: baseline,
+  c: center,
+  n: normal,
+  st: stretch,
+) !default;
+
+$flex-wrap: (
+  f-wrap: wrap,
+  f-nowrap: nowrap,
+  f-wrap-reverse: wrap-reverse,
+) !default;
+
+$flex-dir: (
+  f-row: row,
+  f-column: column,
+  f-column-reverse: column-reverse,
+  f-row-reverse: row-reverse,
+) !default;
+
+$responsiveDisplayClasses: true !default; //if you set it to false classes will be removed
+$responsiveDisplayClassesLimit: limited !default;
+
+// ! if you set to limited only display classes get responsive
+// ! but if you set to limitless whole classes like flex-wrap, justify-content get responsive
+
+//?------------------------------------typography------------------------------------//
+//font families
+$fontFamily: "Poppins", sans-serif !default;
+
+//numbers fs classes
+$fsCount: 10 !default;
+
+//prefix for regular font sizing classes
+$fsPrefix: "fsizing" !default;
+
+$defaultFont: (
+  font-family: $fontFamily,
+  font-size: 0.625rem,
+  // base font size
+    line-height: 1.7,
+  font-weight: 500,
+) !default;
+
+//numbers of heading classes
+$headingCount: 7 !default;
+
+//prefix for heading classes
+$headingPrefix: "heading" !default;
+
+$headingFont: (
+  font-family: $fontFamily,
+  font-size: 0.475rem,
+  // base font size
+    line-height: 2,
+  font-weight: 700,
+) !default;
+
+//prefix for text classes
+$textPrefix: "txt" !default;
+
+//text aligns
+$txtAligns: (
+  r: right,
+  l: left,
+  c: center,
+) !default;
+
+//directions
+$txtDir: (
+  rtl: rtl,
+  ltr: ltr,
+  unset: unset,
+  inherit: inherit,
+  initial: initial,
+) !default;
+
+//line height classes prefix
+$lineHeightPrefix: "lh";
+
+//font weight classes prefix
+$fontWeightPrefix: "fw";
+
+$responsiveTypographyClasses: true !default; //if you set it to false classes will be removed
+$responsiveTypographyClassesLimit: limited !default;
+// ! if you set to limited only heading and fs classes get responsive
+// ! but if you set to limitless whole classes like txt-align and txt-dir get responsive
+
+//?------------------------------------colors------------------------------------//
+
+//percentage of lightening or darkening theme colors
+$colorAdjustPercentage: (
+  low: 10%,
+  normal: 20%,
+  high: 30%,
+  extraHigh: 40%,
+) !default;
+
+//theme colors
+$themeColors: (
+  primary: #8c7ae6,
+  secondary: #9c88ff,
+  light: #ecf0f1,
+  dark: #34495e,
+  green: #1abc9c,
+  blue: #3498db,
+  red: #c0392b,
+  specialGreen: #16a085,
+  specialBlue: #2980b9,
+  white: #fff,
+  black: #000,
+) !default; // ! note : adding or removing colors doesn't affect alerts! but changing them will work
+
+$primary: map-get($themeColors, primary) !default; //for faster and better usage
+$secondary: map-get(
+  $themeColors,
+  secondary
+) !default; //for faster and better usage
+
+//prefix for root color variables
+$rootColorVariablePrefix: "lb-clr" !default;
+
+//?------------------------------------spacings------------------------------------//
+//general spacing
+$sm-spacing: 0.8rem !default;
+$normal-spacing: 1.2rem !default;
+$lg-spacing: 2.5rem !default; //to get better result change these instead of previous vars
+
+//spacing
+$sm-padding: $sm-spacing !default;
+$normal-padding: $normal-spacing !default;
+$lg-padding: $lg-spacing !default;
+$sm-margin: $sm-spacing !default;
+$normal-margin: $normal-spacing !default;
+$lg-margin: $lg-spacing !default;
+
+//spacing range
+$spacingRange: (
+  padding: 7,
+  margin: 7,
+  gap: 7,
+) !default; //it controls the number of spacing classes in _spacing.scss => example : if you set to 10 we have m-1 to m-10 and also for others
+
+$responsiveSpacingClasses: false !default; //if you set it to false classes will be removed
+$responsiveSpacingClassesLimit: limited !default;
+
+// ! if you set to limited only normal margins and paddings get responsive
+// ! but if you set to limitless child paddings, child margins, and auto margins get responsive
+// ! note : only works when $responsiveSpacingClasses set to true
+
+//*------------------------------------------------------------------------------------////
+//*---------------------------------------- components ---------------------------------------//
+//*----------------------------------------------------------------------------------////
+
+//?------------------------------------borders------------------------------------//
+//borders sizes
+$borders: (
+  xm: 1px,
+  sm: 3px,
+  md: 7px,
+  lg: 10px,
+  xl: 15px,
+) !default;
+
+$defaultBorderColor: darken(
+  map-get($themeColors, light),
+  map-get($colorAdjustPercentage, low)
+) !default;
+
+//prefix for border classes
+$borderPrefix: "border" !default;
+
+//border radius
+$border-radius: (
+  sm: 3px,
+  normal: 5px,
+  pill: 90px,
+  lg: 120px,
+) !default;
+
+//prefix for border-radius classes
+$BRPrefix: "round" !default;
+
+$responsiveBorderClasses: false !default; //if you set it to false classes will be removed
+
+//?------------------------------------backgrounds------------------------------------//
+//background classes prefix
+$backgroundPrefix: "back" !default;
+
+$responsiveBackgroundClasses: false !default; //if you set it to false classes will be removed
+
+//?------------------------------------box sizings------------------------------------//
+$boxSizingStep: 10 !default; //example => if you set to 5 each width class increases 5%
+$boxSizingCount: 100 / $boxSizingStep !default;
+
+$responsiveBoxSizingClasses: false !default; //if you set it to false classes will be removed
+
+//?------------------------------------alerts------------------------------------//
+//alert prefix
+$alertPrefix: "alert" !default;
+
+$alertSpecials: (
+  success: #20bf6b,
+  warning: #fed330,
+  danger: #eb2f06,
+  info: #1b9cfc,
+) !default; //these colors are for extra alerts
+
+$alertSpecialIconsAvailable: true !default;
+
+$alertSpecialIcons: (
+  success:
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{rgba(white,1)}' class='bi bi-bookmark-check' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z'/%3E%3Cpath d='M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z'/%3E%3C/svg%3E",
+  warning:
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{rgba(white,1)}' class='bi bi-exclamation-triangle' viewBox='0 0 16 16'%3E%3Cpath d='M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z'/%3E%3Cpath d='M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z'/%3E%3C/svg%3E",
+  danger:
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{rgba(white,1)}' class='bi bi-bug' viewBox='0 0 16 16'%3E%3Cpath d='M4.355.522a.5.5 0 0 1 .623.333l.291.956A4.979 4.979 0 0 1 8 1c1.007 0 1.946.298 2.731.811l.29-.956a.5.5 0 1 1 .957.29l-.41 1.352A4.985 4.985 0 0 1 13 6h.5a.5.5 0 0 0 .5-.5V5a.5.5 0 0 1 1 0v.5A1.5 1.5 0 0 1 13.5 7H13v1h1.5a.5.5 0 0 1 0 1H13v1h.5a1.5 1.5 0 0 1 1.5 1.5v.5a.5.5 0 1 1-1 0v-.5a.5.5 0 0 0-.5-.5H13a5 5 0 0 1-10 0h-.5a.5.5 0 0 0-.5.5v.5a.5.5 0 1 1-1 0v-.5A1.5 1.5 0 0 1 2.5 10H3V9H1.5a.5.5 0 0 1 0-1H3V7h-.5A1.5 1.5 0 0 1 1 5.5V5a.5.5 0 0 1 1 0v.5a.5.5 0 0 0 .5.5H3c0-1.364.547-2.601 1.432-3.503l-.41-1.352a.5.5 0 0 1 .333-.623zM4 7v4a4 4 0 0 0 3.5 3.97V7H4zm4.5 0v7.97A4 4 0 0 0 12 11V7H8.5zM12 6a3.989 3.989 0 0 0-1.334-2.982A3.983 3.983 0 0 0 8 2a3.983 3.983 0 0 0-2.667 1.018A3.989 3.989 0 0 0 4 6h8z'/%3E%3C/svg%3E",
+  info:
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{rgba(white,1)}' class='bi bi-info-circle' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3Cpath d='m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z'/%3E%3C/svg%3E",
+) !default; //these svg icons are for extra alerts
+
+$alertLightBackgroundPercentage: high !default;
+$alertDarkColorPercentage: extraHigh !default;
+$alertDarkBorderPercentage: normal !default;
+
+$alertBorderRadius: map-get($border-radius, sm) !default;
+$alertBorderWidth: map-get($borders, sm) !default;
+
+$alertMarginBottom: 0.75rem !default;
+$alertPadding-y: 1.15em !default;
+$alertPadding-x: 1.3em !default;
+
+$alertFontSize: 0.95rem !default;
+$alertDirection: rtl !default;
+
+//?------------------------------------buttons------------------------------------//
+//buttons
+$btnPadding-y: 0.65rem !default;
+$btnPadding-x: 2.2rem !default;
+
+$btnBorderRadius: map-get($border-radius, sm) !default;
+$btnBorder: none !default;
+
+$btnTranstion: 0.45s !default;
+$btnHoverable: true !default;
+$btnFocusable: true !default;
+
+$btnTextAlign: center !default;
+
+$btnWithIconGap: 0.45rem !default;
+
+//button prefix
+$btnPrefix: "btn" !default;
+
+$btnOutLineAvailable: true !default;
+$btnNeonAvailable: true !default; // * set it to true if your theme is dark
+
+//?------------------------------------extra Utilities------------------------------------//
+$positions: (
+  absolute: absolute,
+  relative: relative,
+  sticky: sticky,
+  fixed: fixed,
+  static: static,
+) !default;
+
+//positions classes prefix
+$positionPrefix: "pos" !default;
+
+$floats: (
+  left: left,
+  right: right,
+  none: none,
+) !default;
+
+//floats classes prefix
+$floatPrefix: "float" !default;
+
+//z-index classes prefix
+$zIndexPrefix: "zi" !default;
+
+$zIndexStep: 100 !default;
+$zIndexCount: 10 !default;
+
+$centeringClasses: true !default; // ! if you set to true many options for centering an element will be available
+$centeringClassesLimit: limited !default;
+
+$TRBLStep: 5 !default; // ! TLRB stands for top right bottom left
+$TRBLCount: 100 / $TRBLStep !default;
+
+//?------------------------------------board------------------------------------//
+$boardShadowBlur: 10px !default;
+$boardShadowDarkPercentage: 15% !default;
+
+$boardBodyPadding-y: 1rem !default;
+$boardBodyPadding-x: 1.8rem !default;
+
+$boardBodyLineHeight: 1.8 !default;
+
+$boardBodyTitleMargin: 0.6rem !default;
+$boardBodyTitleLineHeight: 2 !default;
+
+$boardHoverAbility: false !default;
+
+//?------------------------------------drop downs------------------------------------//
+$dropDownButtonGap: 0.45rem !default;
+
+$dropDownMenuMinWidth: calc(100% + 2rem) !default;
+$dropDownMenuMarginTop: 0.25rem !default;
+$dropDownMenuMarginBottom: 0.25rem !default;
+$dropDownMenuBorderRadius: 5px !default;
+$dropDownMenuShadowColor: scale-color(
+  map-get($themeColors, light),
+  $blackness: 20%
+) !default;
+
+$dropDownMenuLiPadding-x: 1.3rem !default;
+$dropDownMenuLiPadding-y: 1.8rem !default;
+$dropDownMenuLiBorderWidth: 1px !default;
+$dropDownMenuLiBorderType: solid !default;
+$dropDownMenuLiBorderBottomColor: scale-color(
+  map-get($themeColors, light),
+  $blackness: 1%
+) !default;
+$dropDownMenuLiTransition: 0.3s !default;
+$dropDownMenuLiBackgroundColorOnHover: scale-color(
+  map-get($themeColors, light),
+  $lightness: 50%
+) !default;
+
+$dropDownShowTransition: 0.4s !default;
+
+$dropDownTransformOrigin: top !default;
+
+//?------------------------------------navbar------------------------------------//
+$navbarMobileBehavior: true !default;
+
+$navbarMobileToggleDelay: 0.3s !default;
+
+//?------------------------------------tooltip------------------------------------//
+$tooltipBackgroundColor: rgba(map-get($themeColors, black), 0.7) !default;
+$tooltipPopUpDelay: 0.3s !default;
+$tooltipZ-Index: 1500 !default;
+
+//?------------------------------------off canvas------------------------------------//
+$offCanvasOverFlow-y: auto !default;
+$offCanvasDelay: 0.5s !default;
+$offCanvasMinWidth: 18em !default;
+$offCanvasWidth: 33% !default;
+
+$offCanvasHolderLineHeight: 1.7 !default;
+
+$offCanvasHeadingPaddingTop: 0.5em !default;
+$offCanvasHeadingPaddingRight: 1em !default;
+$offCanvasHeadingPaddingBottom: $offCanvasHeadingPaddingTop !default;
+$offCanvasHeadingPaddingLeft: 1.7em !default;
+$offCanvasHeadingFontSize: 1.7rem !default;
+
+$offCanvasBodyBreakPoint: md !default;
+$offCanvasBodyPaddingMobile-x: 1em !default;
+$offCanvasBodyPaddingMobile-y: 1.7em !default;
+$offCanvasBodyPadding-x: 1em !default;
+$offCanvasBodyPadding-y: 2.5em !default;
+
+$offCanvasCloseButtonIconColor: rgba(0, 0, 0, 0.6) !default;
+$offCanvasCloseButtonIcon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='#{$offCanvasCloseButtonIconColor}' d='M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z'%3E%3C/path%3E%3C/svg%3E" !default;
+$offCanvasCloseButtonIconWidth: 1.9rem !default;
+$offCanvasCloseButtonIconBorderWidth: 1px !default;
+$offCanvasCloseButtonIconBorderColor: scale-color(
+  map-get($themeColors, light),
+  $blackness: 15%
+) !default;
+$offCanvasCloseButtonIconPadding: 0.3em !default;
+
+//?------------------------------------close button------------------------------------//
+$closeButtonIconColor: rgba(0, 0, 0, 0.68) !default;
+$closeButtonIconWidth: 1rem !default;
+$closeButtonIcon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='#{$closeButtonIconColor}' d='M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z'%3E%3C/path%3E%3C/svg%3E" !default;
+$closeButtonLeft: 1rem !default;
+$closeButtonCenter-y: true !default;
+
+//?------------------------------------tab------------------------------------//
+$tabLinkColor: $primary !default;
+
+$tabItemActiveBorderColor: scale-color(
+  map-get($themeColors, light),
+  $blackness: 25%
+) !default;
+$tabItemActiveBorderWidth: 1px !default;
+$tabItemActiveBorderType: solid !default;
+$tabItemActiveBorderRadius: 5px !default;
+
+$tabItemPadding-x: 0.6em !default;
+$tabItemPadding-y: 0.8em !default;
+$tabItemFontSize: 1.2rem !default;
+
+$tabBodyPadding-x: 0.8rem !default;
+$tabBodyPadding-y: 1rem !default;
+
+$tabContentLineHeight: 1.8 !default;
+$tabContentChangeDelay: 0.5s !default;
+
+//?------------------------------------accordion------------------------------------//
+$accordionBorderWidth: 1px !default;
+$accordionBorderType: solid !default;
+$accordionBorderColor: scale-color(
+  map-get($themeColors, light),
+  $blackness: 15%
+) !default;
+$accordionBorderRadius: 5px !default;
+
+$accordionHeadingFontSize: 1.1rem !default;
+$accordionHeadingColor: map-get($themeColors, black) !default;
+$accordionHeadingPadding-x: 1em !default;
+$accordionHeadingPadding-y: 1.5em !default;
+$accordionHeadingBackgroundColor: scale-color(
+  map-get($themeColors, light),
+  $lightness: 72%
+) !default;
+$accordionHeadingBorderWidth: 1px !default;
+$accordionHeadingBorderType: solid !default;
+$accordionHeadingBorderColor: scale-color(
+  map-get($themeColors, light),
+  $blackness: 15%
+) !default;
+
+$accordionHeadingColorOnActive: map-get($themeColors, white) !default;
+$accordionHeadingBackgroundColorOnActive: scale-color(
+  map-get($themeColors, dark),
+  $lightness: 10%
+) !default;
+
+$accordionHeadingIconColor: rgba(black, 0.75);
+$accordionHeadingIcon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$accordionHeadingIconColor}' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E" !default;
+$accordionHeadingIconWidth: 1.5rem !default;
+$accordionHeadingIconHeight: $accordionHeadingIconWidth !default;
+$accordionHeadingIconLeft: 1.5em !default;
+$accordionHeadingTransition: 0.3s !default;
+
+$accordionHeadingIconColorOnActive: rgba(white, 0.75) !default;
+$accordionHeadingIconOnActive: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$accordionHeadingIconColorOnActive}' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E" !default;
+
+$accordionContentPadding-x: 1.8em !default;
+$accordionContentPadding-y: 2.3em !default;
+$accordionContentBorderWidth: 1px !default;
+$accordionContentBorderType: solid !default;
+$accordionContentBorderColor: solid
+  scale-color(map-get($themeColors, light), $blackness: 15%) !default;
+$accordionContentLineHeight: 1.7 !default;
+$accordionContentTransition: $accordionHeadingTransition !default;
+
+//*------------------------------------------------------------------------------------////
+//*---------------------------------------- form ---------------------------------------//
+//*----------------------------------------------------------------------------------////
+
+//?------------------------------------general------------------------------------//
+$formInputShadowColorOnFocus: rgba(
+  scale-color($primary, $lightness: 30%),
+  0.3
+) !default;
+$formInputBorderColorOnFocus: scale-color($primary, $lightness: 65%) !default;
+
+$formInputTransition: 0.3s;
+
+$formInputPadding-x: 0.5em !default;
+$formInputPadding-y: 1em !default;
+$formInputMarginBottom: 1.2rem !default;
+$formInputFontSize: 0.95rem !default;
+$formInputLineHeight: 1.5 !default;
+$formInputBorderColor: scale-color(
+  map-get($themeColors, light),
+  $blackness: 10%
+) !default;
+$formInputBorderRadius: 5px !default;
+
+$formInputLgFontSize: 1.13rem !default; // by changing font size everything get bigger!
+$formInputSmFontSize: 0.78rem !default; // by changing font size everything get bigger!
+
+//?------------------------------------form control------------------------------------//
+$formControlLabelMarginBottom: 0.9rem !default;
+$formControlLabelMarginRight: 0.5rem !default;
+
+$formControlPlaceHolderColor: scale-color(
+  map-get($themeColors, light),
+  $blackness: 40%
+) !default;
+$formControlPlaceHolderColorOnHover: scale-color(
+  map-get($themeColors, light),
+  $blackness: 90%
+) !default;
+
+$formControlBackgroundColorOnDisabled: scale-color(
+  map-get($themeColors, black),
+  $lightness: 97%
+) !default;
+$formControlBackgroundColorOnDisabledHover: scale-color(
+  map-get($themeColors, light),
+  $blackness: 100%
+) !default;
+
+//?------------------------------------form select------------------------------------//
+$formSelectBackgroundImage: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !default;
+$formSelectBackgroundImagePosition: left 0.75rem center !default;
+$formSelectBackgroundImageSize: 16px 12px !default;
+
+//?------------------------------------form group------------------------------------//
+$formGroupTextPadding-x: 0.2em !default;
+$formGroupTextPadding-y: 1em !default;
+
+$formGroupTextBorderLeftColor: map-get($themeColors, light) !default;
+
+//?------------------------------------form floating------------------------------------//
+$formFloatingInputHeight: calc(3em + 10px) !default;
+$formFloatingInputPaddingSetOnFocus: 2em 1em 1em 1em !default;
+$formFloatingInputPlaceHolderColor: map-get($themeColors, white) !default;
+
+$formFloatingLabelRight: 1em !default;
+
+$formFloatingLabelFontSizeOnFocus: 0.83rem !default;
+$formFloatingLabelFontWeightOnFocus: 700 !default;
+$formFloatingLabelColorOnFocus: rgba(map-get($themeColors, dark), 0.7) !default;
+$formFloatingLabelTransitionOnFocus-x: -3px !default;
+$formFloatingLabelTransitionOnFocus-y: -20px !default;
+
+//?------------------------------------form checkbox------------------------------------//
+$formCheckboxInlineMarginLeft: 0.8rem !default;
+
+$formCheckboxInputSize: 1.3rem !default;
+$formCheckboxInputMarginLeft: 0.6rem !default;
+$formCheckboxInputCheckMarkIcon: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e" !default;
+
+$formCheckboxInputBackgroundColorOnCheck: $primary !default;
+
+//?------------------------------------form radio------------------------------------//
+$formRadioInlineMarginLeft: $formCheckboxInlineMarginLeft !default;
+
+$formRadioInputSize: $formCheckboxInputSize !default;
+$formRadioInputBorderRadius: 90px !default;
+$formRadioInputMarginLeft: $formCheckboxInputMarginLeft !default;
+
+$formRadioInputBorderWidthOnCheck: 6px !default;
+$formRadioInputBorderColorOnCheck: $formCheckboxInputBackgroundColorOnCheck !default;

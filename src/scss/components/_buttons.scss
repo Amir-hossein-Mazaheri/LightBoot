@@ -1,0 +1,145 @@
+%btn {
+    display: inline-block;
+    padding: $btnPadding-y $btnPadding-x;
+    border: none;
+    text-align: $btnTextAlign;
+    border-radius: $btnBorderRadius;
+    height: fit-content;
+    transition: $btnTranstion;
+    cursor: pointer;
+}
+
+.#{$btnPrefix}-sm {
+    padding: $btnPadding-y - 0.2rem $btnPadding-x - 0.3rem;
+}
+
+.#{$btnPrefix}-lg {
+    padding: $btnPadding-y + 0.25rem $btnPadding-x + 0.65rem;
+}
+
+.#{$btnPrefix}-with-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $btnWithIconGap;
+}
+
+
+@each $title,
+$value in $themeColors {
+    .#{$btnPrefix}-#{$title} {
+        @extend %btn;
+        background-color: $value;
+
+        @if lightness($value) < 80 {
+            color: map-get($themeColors, white);
+        }
+
+        @else {
+            color: map-get($themeColors, black);
+        }
+
+        @if $btnHoverable==true {
+            &:hover {
+                box-shadow: inset 0px 55px 0px 0px scale-color($value, $blackness : 15%);
+            }
+        }
+
+        @if $btnFocusable==true {
+            &:focus {
+                box-shadow: 0 0 0 .25rem rgba($value, $alpha: 0.3);
+            }
+        }
+
+    }
+}
+
+@if $btnOutLineAvailable==true {
+    @each $title, $value in $themeColors {
+        .#{$btnPrefix}-outline-#{$title} {
+            @extend %btn;
+            font-weight: 700;
+            background-color: transparent;
+            border : 1px solid $value;
+            
+
+            @if lightness($value) < 80 {
+                color: $value;
+            }
+
+            @if $btnHoverable==true {
+                &:hover {
+                    background-color: $value;
+                    @if lightness($value) < 80 {
+                        color: map-get($themeColors, white);
+                    }
+                    @if lightness($value) > 80 {
+                        color: scale-color(map-get($themeColors, light), $blackness : 100%);
+                    }
+                }
+            }
+
+            @if $btnFocusable == true {
+                &:focus {
+                    box-shadow: 0 0 0 .25rem rgba($value, $alpha: 0.3);
+                }
+            }
+
+        }
+    }
+}
+
+@if $btnNeonAvailable==true {
+    @each $title,
+    $value in $themeColors {
+        .#{$btnPrefix}-neon-#{$title} {
+            font-size: 1.3rem;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+            border: scale-color($value, $blackness : 10%) 0.125em solid;
+            padding: 0.5em 1.3em;
+            border-radius: 0.25em;
+            text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em scale-color($value, $blackness : 10%);
+            box-shadow:
+                inset 0 0 0.5em 0 scale-color($value, $blackness : 10%),
+                0 0 0.5em 0 scale-color($value, $blackness : 10%);
+            position: relative;
+            background: none;
+            color: scale-color($value, $blackness : 5%);
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                box-shadow: 0 0 1.5em 0.28em scale-color($value, $blackness : 10%);
+                opacity: 0;
+                background-color: scale-color($value, $blackness : 10%);
+                z-index: -1;
+                transition: opacity 100ms linear;
+                transform: scale(1.04);
+            }
+
+            @if $btnHoverable==true {
+                &:hover {
+                    text-shadow: none;
+                    color: scale-color($value, $lightness : 70%);
+                }
+
+                &:hover::after {
+                    opacity: 1;
+                }
+            }
+
+            @if $btnFocusable==true {
+                &:focus::after {
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+}

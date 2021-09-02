@@ -1,0 +1,22 @@
+// main parts
+@import "vars";
+@import "root";
+@import "mixins";
+@import "functions";
+@import "reset";
+@import "grid";
+@import "spacing";
+@import "typography";
+@import "animations";
+
+//components
+@import "components/index";
+
+//forms
+@import "forms/index";
+
+//grid system
+@import "grid/index";
+
+//media queries
+@import "mediaQueries";

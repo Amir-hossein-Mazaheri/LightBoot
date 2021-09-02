@@ -1,0 +1,12 @@
+@each $name, $value in $themeColors {
+    .#{$backgroundPrefix}-#{$name}{
+        background-color: $value !important;
+    }
+}
+
+.#{$backgroundPrefix}-gradient {
+    @include gradient($color1: $primary, $color2: $secondary);
+}
+
+
+
