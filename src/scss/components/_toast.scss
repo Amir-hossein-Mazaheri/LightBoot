@@ -4,7 +4,7 @@
     position: absolute;
     color : map-get($themeColors, white);
     border-radius: 3px;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, opacity 0.7s ease-out;
 }
 
 @each $colorName,
