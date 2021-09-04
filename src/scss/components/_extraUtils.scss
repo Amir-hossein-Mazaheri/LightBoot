@@ -131,4 +131,15 @@
     }
 }
 
+.overflow-y-h {
+    overflow-y: hidden;
+}
 
+.overflow-x-h {
+    overflow-x: hidden;
+}
+
+.overflow-h {
+    @extend .overflow-x-h;
+    @extend .overflow-y-h;
+}

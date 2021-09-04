@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
  * LightBoot v1.0.0
  * Author : Amirhossein Mazaheri
@@ -4545,6 +4544,14 @@ address {
   display: none;
 }
 
+.overflow-y-h, .overflow-h {
+  overflow-y: hidden;
+}
+
+.overflow-x-h, .overflow-h {
+  overflow-x: hidden;
+}
+
 .board {
   box-shadow: 0 0 10px #d2d2d2;
   background-color: #fff;
@@ -5032,6 +5039,51 @@ address {
   display: none;
 }
 
+.toast-info, .toast-danger, .toast-warning, .toast-success {
+  padding: 1.7em 3em;
+  font-size: 0.87rem;
+  position: absolute;
+  color: #fff;
+  border-radius: 3px;
+  transition: transform 0.3s ease-out;
+}
+
+.toast-success {
+  background-color: #20bf6b;
+}
+
+.toast-warning {
+  background-color: #fed330;
+}
+
+.toast-danger {
+  background-color: #eb2f06;
+}
+
+.toast-info {
+  background-color: #1b9cfc;
+}
+
+.toast-bottom-right {
+  bottom: 1%;
+  right: 1%;
+}
+
+.toast-bottom-left {
+  bottom: 1%;
+  left: 1%;
+}
+
+.toast-top-right {
+  top: 1%;
+  right: 1%;
+}
+
+.toast-top-left {
+  top: 1%;
+  left: 1%;
+}
+
 @keyframes bubbling {
   0% {
     transform: scale(1);
@@ -5076,7 +5128,7 @@ address {
   white-space: nowrap;
 }
 .prePageLoader::after {
-  content: "در حال بارگذاری...";
+  content: "Loading please wait...";
   position: absolute;
   top: 50%;
   left: 51%;

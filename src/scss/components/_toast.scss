@@ -1,0 +1,36 @@
+%toast {
+    padding : 1.7em 3em;
+    font-size: 0.87rem;
+    position: absolute;
+    color : map-get($themeColors, white);
+    border-radius: 3px;
+    transition: transform 0.3s ease-out;
+}
+
+@each $colorName,
+$hex in $toastColors {
+    .toast-#{$colorName} {
+        @extend %toast;
+        background-color: $hex;
+    }
+}
+
+.toast-bottom-right {
+    bottom: 1%;
+    right: 1%;
+}
+
+.toast-bottom-left {
+    bottom: 1%;
+    left: 1%;
+}
+
+.toast-top-right {
+    top: 1%;
+    right: 1%;
+}
+
+.toast-top-left {
+    top: 1%;
+    left: 1%;
+}
