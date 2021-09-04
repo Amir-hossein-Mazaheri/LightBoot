@@ -1,5 +1,5 @@
 {
-  "name": "lightboot",
+  "name": "lightboot-framework",
   "version": "1.0.0",
   "description": "a front end framework",
   "main": "index.js",
