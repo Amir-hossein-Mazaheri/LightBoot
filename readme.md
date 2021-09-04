@@ -1,4 +1,3 @@
-# LightBoot
 # LightBoot Framework
 
 💥LightBoot is a framework for front end developers that makes their lives much easier✨
