@@ -5045,7 +5045,7 @@ address {
   position: absolute;
   color: #fff;
   border-radius: 3px;
-  transition: transform 0.3s ease-out, opacity 0.7s ease-out;
+  transition: transform 0.3s ease-out, opacity 0.6s ease-out;
 }
 
 .toast-success {

@@ -542,6 +542,9 @@ $prePageLoaderLoadingIconHeight: $prePageLoaderLoadingIconWidth;
 $prePageLoaderText: "Loading please wait...";
 
 //?------------------------------------toast------------------------------------//
+//tost classes prefix
+$toastPrefix : 'toast';
+
 $toastColors: (
   success: #20bf6b,
   warning: #fed330,
@@ -549,8 +552,19 @@ $toastColors: (
   info: #1b9cfc,
 ) !default;
 
+$toastPadding-x : 3em;
+$toastPadding-y : 1.7em;
 
+$toastFontSize : 0.87rem;
 
+$toastTransition : 0.3s;
+
+$toastBorderRadius : 3px;
+
+$toastSpaceFromEdges-y : 1%;
+$toastSpaceFromEdges-x : 1%;
+
+$toastColor : map-get($themeColors, white);
 
 //*------------------------------------------------------------------------------------////
 //*---------------------------------------- form ---------------------------------------//

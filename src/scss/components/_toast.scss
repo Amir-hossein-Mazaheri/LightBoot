@@ -1,36 +1,37 @@
 %toast {
-    padding : 1.7em 3em;
-    font-size: 0.87rem;
+    padding: $toastPadding-y $toastPadding-x;
+    font-size: $toastFontSize;
     position: absolute;
-    color : map-get($themeColors, white);
-    border-radius: 3px;
-    transition: transform 0.3s ease-out, opacity 0.7s ease-out;
+    color: $toastColor;
+    border-radius: $toastBorderRadius;
+    transition: transform $toastTransition ease-out,
+        opacity $toastTransition + 0.3s ease-out;
 }
 
 @each $colorName,
 $hex in $toastColors {
-    .toast-#{$colorName} {
+    .#{$toastPrefix}-#{$colorName} {
         @extend %toast;
         background-color: $hex;
     }
 }
 
-.toast-bottom-right {
-    bottom: 1%;
-    right: 1%;
+.#{$toastPrefix}-bottom-right {
+    bottom: $toastSpaceFromEdges-y;
+    right: $toastSpaceFromEdges-x;
 }
 
-.toast-bottom-left {
-    bottom: 1%;
-    left: 1%;
+.#{$toastPrefix}-bottom-left {
+    bottom: $toastSpaceFromEdges-y;
+    left: $toastSpaceFromEdges-x;
 }
 
-.toast-top-right {
-    top: 1%;
-    right: 1%;
+.#{$toastPrefix}-top-right {
+    top: $toastSpaceFromEdges-y;
+    right: $toastSpaceFromEdges-x;
 }
 
-.toast-top-left {
-    top: 1%;
-    left: 1%;
+.#{$toastPrefix}-top-left {
+    top: $toastSpaceFromEdges-y;
+    left: $toastSpaceFromEdges-x;
 }
