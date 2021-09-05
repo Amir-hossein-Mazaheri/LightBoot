@@ -59,4 +59,13 @@
         opacity: 0;
         transition: opacity 0.3s ease-out;
     }
+
+    &-center {
+        transform: translate(-50%, -50%);
+    }
+
+    &-bottom {
+        transform: translate(-50%, -85%);
+    }
+
 }

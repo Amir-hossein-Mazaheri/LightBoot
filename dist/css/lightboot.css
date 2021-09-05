@@ -5169,6 +5169,12 @@ address {
   opacity: 0;
   transition: opacity 0.3s ease-out;
 }
+.modal-center {
+  transform: translate(-50%, -50%);
+}
+.modal-bottom {
+  transform: translate(-50%, -85%);
+}
 
 @keyframes bubbling {
   0% {
