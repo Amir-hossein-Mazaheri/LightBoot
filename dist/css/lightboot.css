@@ -5045,7 +5045,7 @@ address {
   position: absolute;
   color: #fff;
   border-radius: 3px;
-  transition: transform 0.3s ease-out, opacity 0.6s ease-out;
+  transition: transform 0.3s ease-in, opacity 0.6s ease-in;
 }
 
 .toast-success {
@@ -5082,6 +5082,35 @@ address {
 .toast-top-left {
   top: 1%;
   left: 1%;
+}
+
+.badge-info, .badge-danger, .badge-warning, .badge-success {
+  display: inline-block;
+  vertical-align: baseline;
+  white-space: nowrap;
+  padding: 0.35em 0.73em;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.badge-success {
+  background-color: #20bf6b;
+  color: #fff;
+}
+
+.badge-warning {
+  background-color: #fed330;
+  color: #000;
+}
+
+.badge-danger {
+  background-color: #eb2f06;
+  color: #fff;
+}
+
+.badge-info {
+  background-color: #1b9cfc;
+  color: #fff;
 }
 
 @keyframes bubbling {

@@ -1,0 +1,31 @@
+%badge {
+    display: inline-block;
+    vertical-align: baseline;
+    white-space: nowrap;
+    padding: $badgePadding-y $badgePadding-x;
+    border-radius: $badgeBorderRadius;
+    font-size: $badgeFontSize;
+}
+
+@each $colorName,
+$hex in $badgeColors {
+    .#{$badgePrefix}-#{$colorName} {
+        @extend %badge;
+        background-color: $hex;
+        @if lightness($hex) < 55 {
+            color : map-get($themeColors, white);
+        } @else {
+            color : map-get($themeColors, black);
+        }
+    }
+}
+
+@if $badgeWithThemeColors==true {
+    @each $colorName,
+    $hex in $themeColors {
+        .#{$badgePrefix}-#{$colorName} {
+            @extend %badge;
+            background-color: $hex;
+        }
+    }
+}

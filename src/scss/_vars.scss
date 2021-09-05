@@ -26,8 +26,7 @@ $columnMarginLeft: $columnMarginRight !default;
 $columnMargin-y: 1.3rem !default; // for flex or grid you can use gap column classes
 
 // breakpoints
-$breakPoints: (
-  sm: 36em,
+$breakPoints: (sm: 36em,
   md: 48em,
   lg: 62em,
   // xl: 75em
@@ -37,8 +36,7 @@ $breakPoints: (
 //?------------------------------------displays------------------------------------//
 
 //display types
-$displays: (
-  g: grid,
+$displays: (g: grid,
   f: flex,
   ig: inline-grid,
   if: inline-flex,
@@ -52,8 +50,7 @@ $displays: (
 $displayPrefix: "dis" !default;
 
 //flex properties
-$justify-content: (
-  s: flex-start,
+$justify-content: (s: flex-start,
   e: flex-end,
   b: baseline,
   c: center,
@@ -65,16 +62,14 @@ $justify-content: (
   st: stretch,
 ) !default;
 
-$align-items: (
-  s: flex-start,
+$align-items: (s: flex-start,
   e: flex-end,
   b: baseline,
   c: center,
   st: stretch,
 ) !default;
 
-$align-content: (
-  s: flex-start,
+$align-content: (s: flex-start,
   e: flex-end,
   b: baseline,
   c: center,
@@ -83,8 +78,7 @@ $align-content: (
   st: stretch,
 ) !default;
 
-$align-self: (
-  s: flex-start,
+$align-self: (s: flex-start,
   e: flex-end,
   b: baseline,
   c: center,
@@ -92,14 +86,12 @@ $align-self: (
   st: stretch,
 ) !default;
 
-$flex-wrap: (
-  f-wrap: wrap,
+$flex-wrap: (f-wrap: wrap,
   f-nowrap: nowrap,
   f-wrap-reverse: wrap-reverse,
 ) !default;
 
-$flex-dir: (
-  f-row: row,
+$flex-dir: (f-row: row,
   f-column: column,
   f-column-reverse: column-reverse,
   f-row-reverse: row-reverse,
@@ -113,7 +105,8 @@ $responsiveDisplayClassesLimit: limited !default;
 
 //?------------------------------------typography------------------------------------//
 //font families
-$fontFamily: "Poppins", sans-serif !default;
+$fontFamily: "Poppins",
+sans-serif !default;
 
 //numbers fs classes
 $fsCount: 10 !default;
@@ -121,11 +114,10 @@ $fsCount: 10 !default;
 //prefix for regular font sizing classes
 $fsPrefix: "fsizing" !default;
 
-$defaultFont: (
-  font-family: $fontFamily,
+$defaultFont: (font-family: $fontFamily,
   font-size: 0.625rem,
   // base font size
-    line-height: 1.7,
+  line-height: 1.7,
   font-weight: 500,
 ) !default;
 
@@ -135,11 +127,10 @@ $headingCount: 7 !default;
 //prefix for heading classes
 $headingPrefix: "heading" !default;
 
-$headingFont: (
-  font-family: $fontFamily,
+$headingFont: (font-family: $fontFamily,
   font-size: 0.475rem,
   // base font size
-    line-height: 2,
+  line-height: 2,
   font-weight: 700,
 ) !default;
 
@@ -147,15 +138,13 @@ $headingFont: (
 $textPrefix: "txt" !default;
 
 //text aligns
-$txtAligns: (
-  r: right,
+$txtAligns: (r: right,
   l: left,
   c: center,
 ) !default;
 
 //directions
-$txtDir: (
-  rtl: rtl,
+$txtDir: (rtl: rtl,
   ltr: ltr,
   unset: unset,
   inherit: inherit,
@@ -176,16 +165,14 @@ $responsiveTypographyClassesLimit: limited !default;
 //?------------------------------------colors------------------------------------//
 
 //percentage of lightening or darkening theme colors
-$colorAdjustPercentage: (
-  low: 10%,
+$colorAdjustPercentage: (low: 10%,
   normal: 20%,
   high: 30%,
   extraHigh: 40%,
 ) !default;
 
 //theme colors
-$themeColors: (
-  primary: #8c7ae6,
+$themeColors: (primary: #8c7ae6,
   secondary: #9c88ff,
   light: #ecf0f1,
   dark: #34495e,
@@ -199,10 +186,8 @@ $themeColors: (
 ) !default; // ! note : adding or removing colors doesn't affect alerts! but changing them will work
 
 $primary: map-get($themeColors, primary) !default; //for faster and better usage
-$secondary: map-get(
-  $themeColors,
-  secondary
-) !default; //for faster and better usage
+$secondary: map-get($themeColors,
+  secondary) !default; //for faster and better usage
 
 //prefix for root color variables
 $rootColorVariablePrefix: "lb-clr" !default;
@@ -222,8 +207,7 @@ $normal-margin: $normal-spacing !default;
 $lg-margin: $lg-spacing !default;
 
 //spacing range
-$spacingRange: (
-  padding: 7,
+$spacingRange: (padding: 7,
   margin: 7,
   gap: 7,
 ) !default; //it controls the number of spacing classes in _spacing.scss => example : if you set to 10 we have m-1 to m-10 and also for others
@@ -241,25 +225,21 @@ $responsiveSpacingClassesLimit: limited !default;
 
 //?------------------------------------borders------------------------------------//
 //borders sizes
-$borders: (
-  xm: 1px,
+$borders: (xm: 1px,
   sm: 3px,
   md: 7px,
   lg: 10px,
   xl: 15px,
 ) !default;
 
-$defaultBorderColor: darken(
-  map-get($themeColors, light),
-  map-get($colorAdjustPercentage, low)
-) !default;
+$defaultBorderColor: darken(map-get($themeColors, light),
+  map-get($colorAdjustPercentage, low)) !default;
 
 //prefix for border classes
 $borderPrefix: "border" !default;
 
 //border radius
-$border-radius: (
-  sm: 3px,
+$border-radius: (sm: 3px,
   normal: 5px,
   pill: 90px,
   lg: 120px,
@@ -286,8 +266,7 @@ $responsiveBoxSizingClasses: false !default; //if you set it to false classes wi
 //alert prefix
 $alertPrefix: "alert" !default;
 
-$alertSpecials: (
-  success: #20bf6b,
+$alertSpecials: (success: #20bf6b,
   warning: #fed330,
   danger: #eb2f06,
   info: #1b9cfc,
@@ -295,15 +274,10 @@ $alertSpecials: (
 
 $alertSpecialIconsAvailable: true !default;
 
-$alertSpecialIcons: (
-  success:
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{rgba(white,1)}' class='bi bi-bookmark-check' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z'/%3E%3Cpath d='M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z'/%3E%3C/svg%3E",
-  warning:
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{rgba(white,1)}' class='bi bi-exclamation-triangle' viewBox='0 0 16 16'%3E%3Cpath d='M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z'/%3E%3Cpath d='M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z'/%3E%3C/svg%3E",
-  danger:
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{rgba(white,1)}' class='bi bi-bug' viewBox='0 0 16 16'%3E%3Cpath d='M4.355.522a.5.5 0 0 1 .623.333l.291.956A4.979 4.979 0 0 1 8 1c1.007 0 1.946.298 2.731.811l.29-.956a.5.5 0 1 1 .957.29l-.41 1.352A4.985 4.985 0 0 1 13 6h.5a.5.5 0 0 0 .5-.5V5a.5.5 0 0 1 1 0v.5A1.5 1.5 0 0 1 13.5 7H13v1h1.5a.5.5 0 0 1 0 1H13v1h.5a1.5 1.5 0 0 1 1.5 1.5v.5a.5.5 0 1 1-1 0v-.5a.5.5 0 0 0-.5-.5H13a5 5 0 0 1-10 0h-.5a.5.5 0 0 0-.5.5v.5a.5.5 0 1 1-1 0v-.5A1.5 1.5 0 0 1 2.5 10H3V9H1.5a.5.5 0 0 1 0-1H3V7h-.5A1.5 1.5 0 0 1 1 5.5V5a.5.5 0 0 1 1 0v.5a.5.5 0 0 0 .5.5H3c0-1.364.547-2.601 1.432-3.503l-.41-1.352a.5.5 0 0 1 .333-.623zM4 7v4a4 4 0 0 0 3.5 3.97V7H4zm4.5 0v7.97A4 4 0 0 0 12 11V7H8.5zM12 6a3.989 3.989 0 0 0-1.334-2.982A3.983 3.983 0 0 0 8 2a3.983 3.983 0 0 0-2.667 1.018A3.989 3.989 0 0 0 4 6h8z'/%3E%3C/svg%3E",
-  info:
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{rgba(white,1)}' class='bi bi-info-circle' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3Cpath d='m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z'/%3E%3C/svg%3E",
+$alertSpecialIcons: (success: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{rgba(white,1)}' class='bi bi-bookmark-check' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z'/%3E%3Cpath d='M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z'/%3E%3C/svg%3E",
+  warning: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{rgba(white,1)}' class='bi bi-exclamation-triangle' viewBox='0 0 16 16'%3E%3Cpath d='M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z'/%3E%3Cpath d='M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z'/%3E%3C/svg%3E",
+  danger: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{rgba(white,1)}' class='bi bi-bug' viewBox='0 0 16 16'%3E%3Cpath d='M4.355.522a.5.5 0 0 1 .623.333l.291.956A4.979 4.979 0 0 1 8 1c1.007 0 1.946.298 2.731.811l.29-.956a.5.5 0 1 1 .957.29l-.41 1.352A4.985 4.985 0 0 1 13 6h.5a.5.5 0 0 0 .5-.5V5a.5.5 0 0 1 1 0v.5A1.5 1.5 0 0 1 13.5 7H13v1h1.5a.5.5 0 0 1 0 1H13v1h.5a1.5 1.5 0 0 1 1.5 1.5v.5a.5.5 0 1 1-1 0v-.5a.5.5 0 0 0-.5-.5H13a5 5 0 0 1-10 0h-.5a.5.5 0 0 0-.5.5v.5a.5.5 0 1 1-1 0v-.5A1.5 1.5 0 0 1 2.5 10H3V9H1.5a.5.5 0 0 1 0-1H3V7h-.5A1.5 1.5 0 0 1 1 5.5V5a.5.5 0 0 1 1 0v.5a.5.5 0 0 0 .5.5H3c0-1.364.547-2.601 1.432-3.503l-.41-1.352a.5.5 0 0 1 .333-.623zM4 7v4a4 4 0 0 0 3.5 3.97V7H4zm4.5 0v7.97A4 4 0 0 0 12 11V7H8.5zM12 6a3.989 3.989 0 0 0-1.334-2.982A3.983 3.983 0 0 0 8 2a3.983 3.983 0 0 0-2.667 1.018A3.989 3.989 0 0 0 4 6h8z'/%3E%3C/svg%3E",
+  info: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{rgba(white,1)}' class='bi bi-info-circle' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3Cpath d='m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z'/%3E%3C/svg%3E",
 ) !default; //these svg icons are for extra alerts
 
 $alertBorderRadius: map-get($border-radius, sm) !default;
@@ -339,8 +313,7 @@ $btnOutLineAvailable: true !default;
 $btnNeonAvailable: true !default; // * set it to true if your theme is dark
 
 //?------------------------------------extra Utilities------------------------------------//
-$positions: (
-  absolute: absolute,
+$positions: (absolute: absolute,
   relative: relative,
   sticky: sticky,
   fixed: fixed,
@@ -350,8 +323,7 @@ $positions: (
 //positions classes prefix
 $positionPrefix: "pos" !default;
 
-$floats: (
-  left: left,
+$floats: (left: left,
   right: right,
   none: none,
 ) !default;
@@ -392,24 +364,18 @@ $dropDownMenuMinWidth: calc(100% + 2rem) !default;
 $dropDownMenuMarginTop: 0.25rem !default;
 $dropDownMenuMarginBottom: 0.25rem !default;
 $dropDownMenuBorderRadius: 5px !default;
-$dropDownMenuShadowColor: scale-color(
-  map-get($themeColors, light),
-  $blackness: 20%
-) !default;
+$dropDownMenuShadowColor: scale-color(map-get($themeColors, light),
+  $blackness: 20%) !default;
 
 $dropDownMenuLiPadding-x: 1.3rem !default;
 $dropDownMenuLiPadding-y: 1.8rem !default;
 $dropDownMenuLiBorderWidth: 1px !default;
 $dropDownMenuLiBorderType: solid !default;
-$dropDownMenuLiBorderBottomColor: scale-color(
-  map-get($themeColors, light),
-  $blackness: 1%
-) !default;
+$dropDownMenuLiBorderBottomColor: scale-color(map-get($themeColors, light),
+  $blackness: 1%) !default;
 $dropDownMenuLiTransition: 0.3s !default;
-$dropDownMenuLiBackgroundColorOnHover: scale-color(
-  map-get($themeColors, light),
-  $lightness: 50%
-) !default;
+$dropDownMenuLiBackgroundColorOnHover: scale-color(map-get($themeColors, light),
+  $lightness: 50%) !default;
 
 $dropDownShowTransition: 0.4s !default;
 
@@ -449,10 +415,8 @@ $offCanvasCloseButtonIconColor: rgba(0, 0, 0, 0.6) !default;
 $offCanvasCloseButtonIcon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='#{$offCanvasCloseButtonIconColor}' d='M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z'%3E%3C/path%3E%3C/svg%3E" !default;
 $offCanvasCloseButtonIconWidth: 1.9rem !default;
 $offCanvasCloseButtonIconBorderWidth: 1px !default;
-$offCanvasCloseButtonIconBorderColor: scale-color(
-  map-get($themeColors, light),
-  $blackness: 15%
-) !default;
+$offCanvasCloseButtonIconBorderColor: scale-color(map-get($themeColors, light),
+  $blackness: 15%) !default;
 $offCanvasCloseButtonIconPadding: 0.3em !default;
 
 //?------------------------------------close button------------------------------------//
@@ -465,10 +429,8 @@ $closeButtonCenter-y: true !default;
 //?------------------------------------tab------------------------------------//
 $tabLinkColor: $primary !default;
 
-$tabItemActiveBorderColor: scale-color(
-  map-get($themeColors, light),
-  $blackness: 25%
-) !default;
+$tabItemActiveBorderColor: scale-color(map-get($themeColors, light),
+  $blackness: 25%) !default;
 $tabItemActiveBorderWidth: 1px !default;
 $tabItemActiveBorderType: solid !default;
 $tabItemActiveBorderRadius: 5px !default;
@@ -486,32 +448,24 @@ $tabContentChangeDelay: 0.5s !default;
 //?------------------------------------accordion------------------------------------//
 $accordionBorderWidth: 1px !default;
 $accordionBorderType: solid !default;
-$accordionBorderColor: scale-color(
-  map-get($themeColors, light),
-  $blackness: 15%
-) !default;
+$accordionBorderColor: scale-color(map-get($themeColors, light),
+  $blackness: 15%) !default;
 $accordionBorderRadius: 5px !default;
 
 $accordionHeadingFontSize: 1.1rem !default;
 $accordionHeadingColor: map-get($themeColors, black) !default;
 $accordionHeadingPadding-x: 1em !default;
 $accordionHeadingPadding-y: 1.5em !default;
-$accordionHeadingBackgroundColor: scale-color(
-  map-get($themeColors, light),
-  $lightness: 72%
-) !default;
+$accordionHeadingBackgroundColor: scale-color(map-get($themeColors, light),
+  $lightness: 72%) !default;
 $accordionHeadingBorderWidth: 1px !default;
 $accordionHeadingBorderType: solid !default;
-$accordionHeadingBorderColor: scale-color(
-  map-get($themeColors, light),
-  $blackness: 15%
-) !default;
+$accordionHeadingBorderColor: scale-color(map-get($themeColors, light),
+  $blackness: 15%) !default;
 
 $accordionHeadingColorOnActive: map-get($themeColors, white) !default;
-$accordionHeadingBackgroundColorOnActive: scale-color(
-  map-get($themeColors, dark),
-  $lightness: 10%
-) !default;
+$accordionHeadingBackgroundColorOnActive: scale-color(map-get($themeColors, dark),
+  $lightness: 10%) !default;
 
 $accordionHeadingIconColor: rgba(black, 0.75);
 $accordionHeadingIcon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$accordionHeadingIconColor}' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E" !default;
@@ -527,8 +481,7 @@ $accordionContentPadding-x: 1.8em !default;
 $accordionContentPadding-y: 2.3em !default;
 $accordionContentBorderWidth: 1px !default;
 $accordionContentBorderType: solid !default;
-$accordionContentBorderColor: solid
-  scale-color(map-get($themeColors, light), $blackness: 15%) !default;
+$accordionContentBorderColor: solid scale-color(map-get($themeColors, light), $blackness: 15%) !default;
 $accordionContentLineHeight: 1.7 !default;
 $accordionContentTransition: $accordionHeadingTransition !default;
 
@@ -542,39 +495,48 @@ $prePageLoaderLoadingIconHeight: $prePageLoaderLoadingIconWidth;
 $prePageLoaderText: "Loading please wait...";
 
 //?------------------------------------toast------------------------------------//
-//tost classes prefix
-$toastPrefix : 'toast';
+//toast classes prefix
+$toastPrefix : 'toast' !default;
 
-$toastColors: (
-  success: #20bf6b,
-  warning: #fed330,
-  danger: #eb2f06,
-  info: #1b9cfc,
-) !default;
+$toastColors: $alertSpecials !default;
 
-$toastPadding-x : 3em;
-$toastPadding-y : 1.7em;
+$toastPadding-x : 3em !default;
+$toastPadding-y : 1.7em !default;
 
-$toastFontSize : 0.87rem;
+$toastFontSize : 0.87rem !default;
 
-$toastTransition : 0.3s;
+$toastTransition : 0.3s !default;
+$toastTransitionType : ease-in !default; 
 
-$toastBorderRadius : 3px;
+$toastBorderRadius : 3px !default;
 
-$toastSpaceFromEdges-y : 1%;
-$toastSpaceFromEdges-x : 1%;
+$toastSpaceFromEdges-y : 1% !default;
+$toastSpaceFromEdges-x : 1% !default;
 
-$toastColor : map-get($themeColors, white);
+$toastColor : map-get($themeColors, white) !default;
+
+//?------------------------------------badges------------------------------------//
+//badge classes prefix
+$badgePrefix : 'badge' !default;
+
+$badgeColors : $alertSpecials !default;
+
+$badgePadding-y : 0.35em !default;
+$badgePadding-x : 0.73em !default;
+
+$badgeBorderRadius : 3px !default;
+
+$badgeFontSize : 0.8rem !default;
+
+$badgeWithThemeColors : false !default; // if you set this to false only badges with special colors will be available
 
 //*------------------------------------------------------------------------------------////
 //*---------------------------------------- form ---------------------------------------//
 //*----------------------------------------------------------------------------------////
 
 //?------------------------------------general------------------------------------//
-$formInputShadowColorOnFocus: rgba(
-  scale-color($primary, $lightness: 30%),
-  0.3
-) !default;
+$formInputShadowColorOnFocus: rgba(scale-color($primary, $lightness: 30%),
+  0.3) !default;
 $formInputBorderColorOnFocus: scale-color($primary, $lightness: 65%) !default;
 
 $formInputTransition: 0.3s;
@@ -584,10 +546,8 @@ $formInputPadding-y: 1em !default;
 $formInputMarginBottom: 1.2rem !default;
 $formInputFontSize: 0.95rem !default;
 $formInputLineHeight: 1.5 !default;
-$formInputBorderColor: scale-color(
-  map-get($themeColors, light),
-  $blackness: 10%
-) !default;
+$formInputBorderColor: scale-color(map-get($themeColors, light),
+  $blackness: 10%) !default;
 $formInputBorderRadius: 5px !default;
 
 $formInputLgFontSize: 1.13rem !default; // by changing font size everything get bigger!
@@ -597,23 +557,15 @@ $formInputSmFontSize: 0.78rem !default; // by changing font size everything get 
 $formControlLabelMarginBottom: 0.9rem !default;
 $formControlLabelMarginRight: 0.5rem !default;
 
-$formControlPlaceHolderColor: scale-color(
-  map-get($themeColors, light),
-  $blackness: 40%
-) !default;
-$formControlPlaceHolderColorOnHover: scale-color(
-  map-get($themeColors, light),
-  $blackness: 90%
-) !default;
+$formControlPlaceHolderColor: scale-color(map-get($themeColors, light),
+  $blackness: 40%) !default;
+$formControlPlaceHolderColorOnHover: scale-color(map-get($themeColors, light),
+  $blackness: 90%) !default;
 
-$formControlBackgroundColorOnDisabled: scale-color(
-  map-get($themeColors, black),
-  $lightness: 97%
-) !default;
-$formControlBackgroundColorOnDisabledHover: scale-color(
-  map-get($themeColors, light),
-  $blackness: 100%
-) !default;
+$formControlBackgroundColorOnDisabled: scale-color(map-get($themeColors, black),
+  $lightness: 97%) !default;
+$formControlBackgroundColorOnDisabledHover: scale-color(map-get($themeColors, light),
+  $blackness: 100%) !default;
 
 //?------------------------------------form select------------------------------------//
 $formSelectBackgroundImage: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !default;

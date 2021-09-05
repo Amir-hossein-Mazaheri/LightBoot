@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass src/scss/lightboot.scss:dist/css/lightboot.css --watch",
-    "sassMin": "sass src/scss/lightboot.scss:dist/css/lightboot.min.css --watch --style compressed"
+    "sassMin": "sass src/scss/lightboot.scss:dist/css/lightboot.min.css --watch --style compressed",
+    "sassGrid": "sass src/scss/grid/:dist/css/ --watch",
+    "sassGridMin": "sass src/scss/grid/:dist/css/ --watch --style compressed"
   },
   "repository": {
     "type": "git",
