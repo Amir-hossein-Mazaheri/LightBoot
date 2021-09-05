@@ -5043,13 +5043,13 @@ address {
   padding: 1.7em 3em;
   font-size: 0.87rem;
   position: absolute;
-  color: #fff;
   border-radius: 3px;
   transition: transform 0.3s ease-in, opacity 0.6s ease-in;
 }
 
 .toast-success {
   background-color: #20bf6b;
+  color: #fff;
 }
 
 .toast-warning {
@@ -5058,10 +5058,12 @@ address {
 
 .toast-danger {
   background-color: #eb2f06;
+  color: #fff;
 }
 
 .toast-info {
   background-color: #1b9cfc;
+  color: #fff;
 }
 
 .toast-bottom-right {
@@ -5100,7 +5102,6 @@ address {
 
 .badge-warning {
   background-color: #fed330;
-  color: #000;
 }
 
 .badge-danger {

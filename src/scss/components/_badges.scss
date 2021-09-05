@@ -14,8 +14,6 @@ $hex in $badgeColors {
         background-color: $hex;
         @if lightness($hex) < 55 {
             color : map-get($themeColors, white);
-        } @else {
-            color : map-get($themeColors, black);
         }
     }
 }

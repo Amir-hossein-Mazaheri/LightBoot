@@ -2,7 +2,6 @@
     padding: $toastPadding-y $toastPadding-x;
     font-size: $toastFontSize;
     position: absolute;
-    color: $toastColor;
     border-radius: $toastBorderRadius;
     transition: transform $toastTransition $toastTransitionType,
         opacity $toastTransition + 0.3s $toastTransitionType;
@@ -13,6 +12,9 @@ $hex in $toastColors {
     .#{$toastPrefix}-#{$colorName} {
         @extend %toast;
         background-color: $hex;
+        @if lightness($hex) < 55 {
+            color: map-get($themeColors, white);
+        }
     }
 }
 
