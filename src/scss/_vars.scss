@@ -36,7 +36,8 @@ $breakPoints: (sm: 36em,
 //?------------------------------------displays------------------------------------//
 
 //display types
-$displays: (g: grid,
+$displays: (
+  g: grid,
   f: flex,
   ig: inline-grid,
   if: inline-flex,
@@ -50,6 +51,8 @@ $displays: (g: grid,
 $displayPrefix: "dis" !default;
 
 //flex properties
+$justifyContentAvailability : true;
+
 $justify-content: (s: flex-start,
   e: flex-end,
   b: baseline,
@@ -62,12 +65,16 @@ $justify-content: (s: flex-start,
   st: stretch,
 ) !default;
 
+$alignItemsAvailability : true;
+
 $align-items: (s: flex-start,
   e: flex-end,
   b: baseline,
   c: center,
   st: stretch,
 ) !default;
+
+$alignContentAvailability : false;
 
 $align-content: (s: flex-start,
   e: flex-end,
@@ -78,6 +85,8 @@ $align-content: (s: flex-start,
   st: stretch,
 ) !default;
 
+$alignSelfAvailability : true;
+
 $align-self: (s: flex-start,
   e: flex-end,
   b: baseline,
@@ -86,16 +95,24 @@ $align-self: (s: flex-start,
   st: stretch,
 ) !default;
 
+$flexWrapAvailability : false;
+
 $flex-wrap: (f-wrap: wrap,
   f-nowrap: nowrap,
   f-wrap-reverse: wrap-reverse,
 ) !default;
+
+$flexDirAvailability : false;
 
 $flex-dir: (f-row: row,
   f-column: column,
   f-column-reverse: column-reverse,
   f-row-reverse: row-reverse,
 ) !default;
+
+$flexGrowAvailability : true;
+
+$flexShrinkAvailability : false;
 
 $responsiveDisplayClasses: true !default; //if you set it to false classes will be removed
 $responsiveDisplayClassesLimit: limited !default;

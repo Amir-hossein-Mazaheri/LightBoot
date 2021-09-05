@@ -19,13 +19,6 @@
         }
     }
 
-    @for $i from 1 to $columnSys+ 1 {
-        .#{$ColumnPrefix}-grow-#{$i} {
-            flex: 1 0 calc(#{calculateGridStep() * $i * 1%} - #{$columnMarginRight + $columnMarginLeft});
-            width: calc(#{calculateGridStep() * $i * 1%} - #{$columnMarginRight + $columnMarginLeft});
-        }
-    }
-
     @each $name,
     $value in $breakPoints {
         @include mediaQueryUp($name) {
@@ -36,12 +29,6 @@
                 }
             }
 
-            @for $i from 1 to $columnSys+ 1 {
-                .#{$ColumnPrefix}-#{$name}-grow-#{$i} {
-                    flex: 1 0 calc(#{calculateGridStep() * $i * 1%} - #{$columnMarginRight + $columnMarginLeft});
-                    width: calc(#{calculateGridStep() * $i * 1%} - #{$columnMarginRight + $columnMarginLeft});
-                }
-            }
         }
     }
 }

@@ -1,44 +1,82 @@
-@each $name, $value in $displays {
-    .#{$displayPrefix}-#{$name}{
+@each $name,
+$value in $displays {
+    .#{$displayPrefix}-#{$name} {
         display: $value !important;
     }
-}  
-
-@each $name, $value in $justify-content {
-    .#{$displayPrefix}-jc-#{$name}{
-        justify-content: $value !important;
-    }
-} 
-
-@each $name, $value in $align-items {
-    .#{$displayPrefix}-ai-#{$name}{
-        align-items: $value !important;
-    }
-} 
-
-@each $name, $value in $align-content {
-    .#{$displayPrefix}-ac-#{$name}{
-        align-content: $value !important;
-    }
-} 
-
-@each $name, $value in $align-self {
-    .#{$displayPrefix}-as-#{$name}{
-        align-self: $value !important;
-    }
 }
- 
-@each $name, $value in $flex-wrap {
-    .#{$displayPrefix}-#{$name}{
-        flex-wrap: $value !important;
+
+@if $justifyContentAvailability==true {
+
+    @each $name,
+    $value in $justify-content {
+        .#{$displayPrefix}-jc-#{$name} {
+            justify-content: $value !important;
+        }
     }
 }
 
-@each $name, $value in $flex-dir {
-    .#{$displayPrefix}-#{$name}{
-        flex-direction: $value !important;
+@if $alignItemsAvailability==true {
+
+    @each $name,
+    $value in $align-items {
+        .#{$displayPrefix}-ai-#{$name} {
+            align-items: $value !important;
+        }
     }
 }
 
+@if $alignContentAvailability==true {
 
+    @each $name,
+    $value in $align-content {
+        .#{$displayPrefix}-ac-#{$name} {
+            align-content: $value !important;
+        }
+    }
+}
 
+@if $alignSelfAvailability==true {
+
+    @each $name,
+    $value in $align-self {
+        .#{$displayPrefix}-as-#{$name} {
+            align-self: $value !important;
+        }
+    }
+}
+
+@if $flexWrapAvailability==true {
+
+    @each $name,
+    $value in $flex-wrap {
+        .#{$displayPrefix}-#{$name} {
+            flex-wrap: $value !important;
+        }
+    }
+}
+
+@if $flexDirAvailability==true {
+
+    @each $name,
+    $value in $flex-dir {
+        .#{$displayPrefix}-#{$name} {
+            flex-direction: $value !important;
+        }
+    }
+}
+
+@if $flexGrowAvailability==true {
+    @for $i from 1 to $columnSys+1 {
+        .#{$displayPrefix}-grow-#{$i} {
+            flex-grow: $i;
+        }
+    }
+}
+
+@if $flexShrinkAvailability==true {
+    @for $i from 1 to $columnSys+1 {
+        .#{$displayPrefix}-shrink-#{$i} {
+            flex-shrink: $i;
+        }
+    }
+}
