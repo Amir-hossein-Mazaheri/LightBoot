@@ -5127,7 +5127,7 @@ address {
   border-radius: 5px;
   z-index: -1;
   opacity: 0;
-  transition: 0.3s ease-out;
+  transition: 0.3s linear;
 }
 .modal-heading {
   position: relative;
@@ -5167,13 +5167,19 @@ address {
   background-color: rgba(0, 0, 0, 0.65);
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s linear;
 }
 .modal-center {
   transform: translate(-50%, -50%);
 }
 .modal-bottom {
   transform: translate(-50%, -85%);
+}
+.modal-lg {
+  max-width: 800px;
+}
+.modal-sm {
+  max-width: 400px;
 }
 
 @keyframes bubbling {

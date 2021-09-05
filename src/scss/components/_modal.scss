@@ -5,38 +5,38 @@
     left: 50%;
     top: 0;
     transform: translateX(-50%);
-    padding: 1.3em 2em;
-    box-shadow: 0 0 1.3rem scale-color(map-get($themeColors, black), $lightness : 30%);
-    background-color: map-get($themeColors, white);
-    border-radius: 5px;
+    padding: $modalPadding-y $modalPadding-x;
+    box-shadow: 0 0 $modalBoxShadowBlur $modalBoxShadowColor;
+    background-color: $modalBackgroundColor;
+    border-radius: $modalBorderRadius;
     z-index: -1;
     opacity: 0;
-    transition: 0.3s ease-out;
+    transition: $modalTransition $modalTransitionType;
 
     &-heading {
         position: relative;
-        font-size: 1.5rem;
-        font-weight: 500;
-        padding-top: 0.5rem;
-        padding-bottom: 0.8rem;
-        margin-bottom: 1rem;
-        border-bottom: 1px solid scale-color(map-get($themeColors, light), $blackness : 10%);
+        font-size: $modalHeadingFontSize;
+        font-weight: $modalHeadingFontWeight;
+        padding-top: $modalHeadingPaddingTop;
+        padding-bottom: $modalHeadingPaddingBottom;
+        margin-bottom: $modalHeadingMarginBottom;
+        border-bottom: $modalHeadingBorderBottomWidth $modalHeadingBorderBottomType $modalHeadingBorderBottomColor;
     }
 
     &-content {
-        line-height: 1.7;
-        color: scale-color(map-get($themeColors, black), $lightness : 20%);
+        line-height: $modalContentLineHeight;
+        color: $modalContentColor;
     }
 
     &-close {
         display: none;
 
         &::before {
-            content: url($closeButtonIcon);
+            content: url($modalCloseIcon);
             position: absolute;
-            top: 38%;
-            right: 0;
-            width: 1.1rem;
+            top: $modalCloseTop;
+            right: $modalCloseRight;
+            width: $modalCloseWidth;
             line-height: 0;
             transform: translateY(-50%);
             cursor: pointer;
@@ -44,20 +44,20 @@
     }
 
     &-footer {
-        padding-top: 1rem;
-        padding-bottom: 0.1rem;
-        margin-top: 1rem;
-        border-top: 1px solid scale-color(map-get($themeColors, light), $blackness : 10%);
+        padding-top: $modalFooterPaddingTop;
+        padding-bottom: $modalFooterPaddingBottom;
+        margin-top: $modalFooterMarginTop;
+        border-top: $modalFooterBorderTopWidth $modalFooterBorderTopType $modalFooterBorderTopColor;
 
     }
 
     &-filter {
         position: absolute;
         inset: 0;
-        background-color: rgba(map-get($themeColors, black), 0.65);
+        background-color: $modalFilterBackgroundColor;
         z-index: -1;
         opacity: 0;
-        transition: opacity 0.3s ease-out;
+        transition: opacity $modalFilterTransition $modalFilterTransitionType;
     }
 
     &-center {
@@ -66,6 +66,14 @@
 
     &-bottom {
         transform: translate(-50%, -85%);
+    }
+
+    &-lg {
+        max-width: 800px;
+    }
+
+    &-sm {
+        max-width: 400px;
     }
 
 }

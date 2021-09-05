@@ -152,10 +152,10 @@ $txtDir: (rtl: rtl,
 ) !default;
 
 //line height classes prefix
-$lineHeightPrefix: "lh";
+$lineHeightPrefix: "lh" !default;
 
 //font weight classes prefix
-$fontWeightPrefix: "fw";
+$fontWeightPrefix: "fw" !default;
 
 $responsiveTypographyClasses: true !default; //if you set it to false classes will be removed
 $responsiveTypographyClassesLimit: limited !default;
@@ -486,13 +486,13 @@ $accordionContentLineHeight: 1.7 !default;
 $accordionContentTransition: $accordionHeadingTransition !default;
 
 //?------------------------------------pre page loader------------------------------------//
-$prePageLoaderBackgroundColor: rgba(black, 0.83);
+$prePageLoaderBackgroundColor: rgba(black, 0.83) !default;
 
-$prePageLoaderLoadingIcon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{rgba(white, 0.98)}' class='bi bi-circle' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3C/svg%3E";
+$prePageLoaderLoadingIcon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{rgba(white, 0.98)}' class='bi bi-circle' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3C/svg%3E" !default;
 $prePageLoaderLoadingIconWidth: 3.5rem;
-$prePageLoaderLoadingIconHeight: $prePageLoaderLoadingIconWidth;
+$prePageLoaderLoadingIconHeight: $prePageLoaderLoadingIconWidth !default;
 
-$prePageLoaderText: "Loading please wait...";
+$prePageLoaderText: "Loading please wait..." !default;
 
 //?------------------------------------toast------------------------------------//
 //toast classes prefix
@@ -506,7 +506,7 @@ $toastPadding-y : 1.7em !default;
 $toastFontSize : 0.87rem !default;
 
 $toastTransition : 0.3s !default;
-$toastTransitionType : ease-in !default; 
+$toastTransitionType : ease-in !default;
 
 $toastBorderRadius : 3px !default;
 
@@ -527,6 +527,52 @@ $badgeBorderRadius : 3px !default;
 $badgeFontSize : 0.8rem !default;
 
 $badgeWithThemeColors : false !default; // if you set this to false only badges with special colors will be available
+
+//?------------------------------------modal------------------------------------//
+$modalPadding-y : 1.3em !default;
+$modalPadding-x : 2em !default;
+
+$modalBoxShadowBlur : 1.3rem !default;
+$modalBoxShadowColor : scale-color(map-get($themeColors, black), $lightness : 30%) !default;
+
+$modalBackgroundColor : map-get($themeColors, white) !default;
+
+$modalBorderRadius : 5px !default;
+
+$modalTransition : 0.3s !default;
+$modalTransitionType : linear !default;
+
+$modalHeadingFontSize : 1.5rem !default;
+$modalHeadingFontWeight : 500 !default;
+
+$modalHeadingPaddingTop : 0.5rem !default;
+$modalHeadingPaddingBottom : 0.8rem !default;
+$modalHeadingMarginBottom : 1rem !default;
+
+$modalHeadingBorderBottomWidth : 1px !default;
+$modalHeadingBorderBottomType : solid !default;
+$modalHeadingBorderBottomColor : scale-color(map-get($themeColors, light), $blackness : 10%) !default;
+
+$modalContentColor : scale-color(map-get($themeColors, black), $lightness : 20%) !default;
+$modalContentLineHeight : 1.7 !default;
+
+$modalCloseIcon : $closeButtonIcon !default;
+$modalCloseTop : 38% !default;
+$modalCloseRight : 0 !default;
+$modalCloseWidth : 1.1rem !default;
+
+$modalFooterPaddingTop : 1rem !default;
+$modalFooterPaddingBottom : 0.1rem !default;
+$modalFooterMarginTop : 1rem !default;
+
+$modalFooterBorderTopWidth : $modalHeadingBorderBottomWidth !default;
+$modalFooterBorderTopType : $modalHeadingBorderBottomType !default;
+$modalFooterBorderTopColor : $modalHeadingBorderBottomColor !default;
+
+$modalFilterBackgroundColor : rgba(map-get($themeColors, black), 0.65) !default;
+
+$modalFilterTransition : 0.3s !default;
+$modalFilterTransitionType : linear !default;
 
 //*------------------------------------------------------------------------------------////
 //*---------------------------------------- form ---------------------------------------//
