@@ -58,12 +58,12 @@ const toast = function (toast_type = 'danger', toast_pos = 'bottom-left', toast_
         toastElm.append(toastCloseBtn);
         toastCloseBtn.addEventListener('click', () => {
             toastElm.style.opacity = '0';
-            toastEffect()
+            toastEffect();
         });
     }
 
     document.querySelector('body').prepend(toastElm);
-    toastEffect()
+    toastEffect();
 
     setTimeout(() => {
         toastElm.style.opacity = '1';
@@ -79,5 +79,5 @@ const toast = function (toast_type = 'danger', toast_pos = 'bottom-left', toast_
                 toastEffect()
             }, toast_exit_interval + 700);
         }
-    }, toast_entrance_interval)
+    }, toast_entrance_interval);
 }

@@ -1,0 +1,62 @@
+.modal {
+    position: fixed;
+    max-width: 600px;
+    width: 90%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    padding: 1.3em 2em;
+    box-shadow: 0 0 1.3rem scale-color(map-get($themeColors, black), $lightness : 30%);
+    background-color: map-get($themeColors, white);
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s ease-out;
+
+    &-heading {
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding-top: 0.5rem;
+        padding-bottom: 0.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid scale-color(map-get($themeColors, light), $blackness : 10%);
+    }
+
+    &-content {
+        line-height: 1.7;
+        color: scale-color(map-get($themeColors, black), $lightness : 20%);
+    }
+
+    &-close {
+        display: none;
+
+        &::before {
+            content: url($closeButtonIcon);
+            position: absolute;
+            top: 38%;
+            right: 0;
+            width: 1.1rem;
+            line-height: 0;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    }
+
+    &-footer {
+        padding-top: 1rem;
+        padding-bottom: 0.1rem;
+        margin-top: 1rem;
+        border-top: 1px solid scale-color(map-get($themeColors, light), $blackness : 10%);
+
+    }
+
+    &-filter {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(map-get($themeColors, black), 0.65);
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+    }
+}
