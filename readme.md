@@ -2,6 +2,8 @@
 
 💥LightBoot is a framework for front end developers that makes their lives much easier✨
 
+** Author : Amirhossein Mazaheri **
+
 ## Installation
 
 you can install by npm
