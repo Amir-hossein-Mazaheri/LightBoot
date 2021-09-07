@@ -4993,6 +4993,48 @@ address {
   max-width: 400px;
 }
 
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.3em 1.7em;
+  background-color: #fff;
+  box-shadow: 0 0 1rem 5px #cfcfcf;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.pagination-item {
+  padding: 0.8em 1.3em;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 3;
+}
+.pagination-item.active {
+  background-color: #8c7ae6;
+  color: #fff;
+}
+.pagination::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #8c7ae6;
+  z-index: 2;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+.pagination:hover {
+  color: #fff;
+}
+.pagination:hover .pagination-item.active {
+  background-color: #fff;
+  color: #000;
+}
+.pagination:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 @keyframes bubbling {
   0% {
     transform: scale(1);

@@ -3,7 +3,7 @@ function getHeight(element) {
     let elementHeight;
 
     if (getComputedStyle(element).display == "none") {
-        element.style.display = "block";
+        element.style.display = "initial";
         element.style.visibility = "hidden";
         element.style.position = "absolute";
         elementHeight = element.clientHeight;
@@ -27,7 +27,7 @@ function getPaddingBottom(element) {
 }
 
 function slideEffectOpen(element) {
-    element.setAttribute('style', '')
+    element.setAttribute('style', '');
     let elmHeight = getHeight(element);
     element.style.overflow = "hidden";
     element.style.display = "block";
@@ -54,12 +54,10 @@ function slideEffectOpen(element) {
         element.style.paddingTop = paddingTop + "px";
         element.style.height = height + "px";
         element.style.paddingBottom = paddingBottom + "px";
-
         if (height == elmHeight && paddingTop == elmPaddingT && paddingBottom == elmPaddingB) {
             clearInterval(int);
         }
     }
-
 }
 
 function slideEffectClose(element) {

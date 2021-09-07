@@ -1,0 +1,47 @@
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.3em 1.7em;
+  background-color: #fff;
+  box-shadow: 0 0 1rem 5px scale-color(map-get($themeColors, light), $blackness: 17%);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+
+  &-item {
+    padding: 0.8em 1.3em;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 3;
+
+    &.active {
+      background-color: $primary;
+      color: map-get($themeColors, white);
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: map-get($themeColors, primary);
+    z-index: 2;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color : map-get($themeColors, white);
+  }
+
+  &:hover &-item.active {
+    background-color: map-get($themeColors, white);
+    color: map-get($themeColors, black);
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
