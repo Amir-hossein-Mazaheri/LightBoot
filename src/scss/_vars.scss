@@ -602,8 +602,40 @@ $modalFilterTransition: 0.3s !default;
 $modalFilterTransitionType: linear !default;
 
 //?------------------------------------pagination------------------------------------//
+$paginationGap: 0.5rem;
+$paginationPadding-y: 0.3em;
+$paginationPadding-x: 1.7em;
 
+$paginationBackgroundColor: map-get($themeColors, white);
 
+$paginationBoxShadowBlur: 1rem;
+$paginationBoxShadowSpread: 7px;
+$paginationBoxShadowColor: scale-color(map-get($themeColors, light), $blackness: 17%);
+
+$paginationBorderRadius: 5px;
+
+$paginationItemPadding-y: 0.8em;
+$paginationItemPadding-x: 1.3em;
+
+$paginationItemBorderRadius: 3px;
+
+$paginationItemZIndex: 3;
+
+$paginationActiveItemBackgroundColor: $primary;
+$paginationActiveItemColor: map-get($themeColors, white);
+
+$paginationBeforeBackgroundColor: $primary;
+$paginationBeforeZIndex: 2;
+$paginationBeforeTransition: 0.3s;
+$paginationBeforeTransitionType: ease-in-out;
+
+// if you dont like the effect you can set this to false!
+$paginationHoverEffect: true;
+
+$paginationColorOnHover: map-get($themeColors, white);
+
+$paginationActiveItemBackgroundColorOnHover: map-get($themeColors, white);
+$paginationActiveItemColorOnHover: map-get($themeColors, black);
 
 //*------------------------------------------------------------------------------------////
 //*---------------------------------------- form ---------------------------------------//

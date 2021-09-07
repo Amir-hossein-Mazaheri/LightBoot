@@ -1,47 +1,50 @@
 .pagination {
   display: flex;
-  gap: 0.5rem;
-  padding: 0.3em 1.7em;
-  background-color: #fff;
-  box-shadow: 0 0 1rem 5px scale-color(map-get($themeColors, light), $blackness: 17%);
-  border-radius: 5px;
+  gap: $paginationGap;
+  padding: $paginationPadding-y $paginationPadding-x;
+  background-color: $paginationBackgroundColor;
+  box-shadow: 0 0 $paginationBoxShadowBlur $paginationBoxShadowSpread $paginationBoxShadowColor;
+  border-radius: $paginationBorderRadius;
   position: relative;
   overflow: hidden;
 
   &-item {
-    padding: 0.8em 1.3em;
-    border-radius: 3px;
+    padding: $paginationItemPadding-y $paginationItemPadding-x;
+    border-radius: $paginationItemBorderRadius;
     cursor: pointer;
-    z-index: 3;
+    z-index: $paginationItemZIndex;
 
     &.active {
-      background-color: $primary;
-      color: map-get($themeColors, white);
+      background-color: $paginationActiveItemBackgroundColor;
+      color: $paginationActiveItemColor;
     }
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: map-get($themeColors, primary);
-    z-index: 2;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease-in-out;
-  }
+  @if $paginationHoverEffect == true {
 
-  &:hover {
-    color : map-get($themeColors, white);
-  }
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: $paginationBeforeBackgroundColor;
+      z-index: $paginationBeforeZIndex;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform $paginationBeforeTransition $paginationBeforeTransitionType;
+    }
 
-  &:hover &-item.active {
-    background-color: map-get($themeColors, white);
-    color: map-get($themeColors, black);
-  }
+    &:hover {
+      color: $paginationColorOnHover;
+    }
 
-  &:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
+    &:hover &-item.active {
+      background-color: $paginationActiveItemBackgroundColorOnHover;
+      color: $paginationActiveItemColorOnHover;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
   }
 }
