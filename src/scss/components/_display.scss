@@ -6,60 +6,54 @@ $value in $displays {
 }
 
 @if $justifyContentAvailability==true {
-
     @each $name,
     $value in $justify-content {
-        .#{$displayPrefix}-jc-#{$name} {
+        .#{$flexPropertiesPrefix}-jc-#{$name} {
             justify-content: $value !important;
         }
     }
 }
 
 @if $alignItemsAvailability==true {
-
     @each $name,
     $value in $align-items {
-        .#{$displayPrefix}-ai-#{$name} {
+        .#{$flexPropertiesPrefix}-ai-#{$name} {
             align-items: $value !important;
         }
     }
 }
 
 @if $alignContentAvailability==true {
-
     @each $name,
     $value in $align-content {
-        .#{$displayPrefix}-ac-#{$name} {
+        .#{$flexPropertiesPrefix}-ac-#{$name} {
             align-content: $value !important;
         }
     }
 }
 
 @if $alignSelfAvailability==true {
-
     @each $name,
     $value in $align-self {
-        .#{$displayPrefix}-as-#{$name} {
+        .#{$flexPropertiesPrefix}-as-#{$name} {
             align-self: $value !important;
         }
     }
 }
 
 @if $flexWrapAvailability==true {
-
     @each $name,
     $value in $flex-wrap {
-        .#{$displayPrefix}-#{$name} {
+        .#{$flexPropertiesPrefix}-#{$name} {
             flex-wrap: $value !important;
         }
     }
 }
 
 @if $flexDirAvailability==true {
-
     @each $name,
     $value in $flex-dir {
-        .#{$displayPrefix}-#{$name} {
+        .#{$flexPropertiesPrefix}-#{$name} {
             flex-direction: $value !important;
         }
     }
@@ -67,7 +61,7 @@ $value in $displays {
 
 @if $flexGrowAvailability==true {
     @for $i from 1 to $columnSys+1 {
-        .#{$displayPrefix}-grow-#{$i} {
+        .#{$flexPropertiesPrefix}-grow-#{$i} {
             flex-grow: $i;
         }
     }
@@ -75,8 +69,16 @@ $value in $displays {
 
 @if $flexShrinkAvailability==true {
     @for $i from 1 to $columnSys+1 {
-        .#{$displayPrefix}-shrink-#{$i} {
+        .#{$flexPropertiesPrefix}-shrink-#{$i} {
             flex-shrink: $i;
+        }
+    }
+}
+
+@if $orderClassesAvailability == true {
+    @for $i from 1 to $columnSys + 1 {
+        .order-#{$i} {
+            order : $i;
         }
     }
 }

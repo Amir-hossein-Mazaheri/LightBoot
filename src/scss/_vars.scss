@@ -44,16 +44,19 @@ $displays: (
   b: block,
   ib: inline-block,
   i: inline,
-  n: none,
+  n: none
 ) !default;
 
 //display classes prefix
 $displayPrefix: "dis" !default;
 
 //flex properties
+$flexPropertiesPrefix : 'flex';
+
 $justifyContentAvailability : true;
 
-$justify-content: (s: flex-start,
+$justify-content: (
+  s: flex-start,
   e: flex-end,
   b: baseline,
   c: center,
@@ -62,57 +65,64 @@ $justify-content: (s: flex-start,
   sa: space-around,
   sb: space-between,
   se: space-evenly,
-  st: stretch,
+  st: stretch
 ) !default;
 
 $alignItemsAvailability : true;
 
-$align-items: (s: flex-start,
+$align-items: (
+  s: flex-start,
   e: flex-end,
   b: baseline,
   c: center,
-  st: stretch,
+  st: stretch
 ) !default;
 
 $alignContentAvailability : false;
 
-$align-content: (s: flex-start,
+$align-content: (
+  s: flex-start,
   e: flex-end,
   b: baseline,
   c: center,
   sa: space-around,
   sb: space-between,
-  st: stretch,
+  st: stretch
 ) !default;
 
 $alignSelfAvailability : true;
 
-$align-self: (s: flex-start,
+$align-self: (
+  s: flex-start,
   e: flex-end,
   b: baseline,
   c: center,
   n: normal,
-  st: stretch,
+  st: stretch
 ) !default;
 
-$flexWrapAvailability : false;
+$flexWrapAvailability : true;
 
-$flex-wrap: (f-wrap: wrap,
-  f-nowrap: nowrap,
-  f-wrap-reverse: wrap-reverse,
+$flex-wrap: (
+  w: wrap,
+  nw: nowrap,
+  wr: wrap-reverse
 ) !default;
 
 $flexDirAvailability : false;
 
-$flex-dir: (f-row: row,
-  f-column: column,
-  f-column-reverse: column-reverse,
-  f-row-reverse: row-reverse,
+$flex-dir: (
+  r: row,
+  c: column,
+  rr: row-reverse,
+  cr: column-reverse
 ) !default;
 
 $flexGrowAvailability : true;
 
 $flexShrinkAvailability : false;
+
+$orderClassesAvailability : true;
 
 $responsiveDisplayClasses: true !default; //if you set it to false classes will be removed
 $responsiveDisplayClassesLimit: limited !default;

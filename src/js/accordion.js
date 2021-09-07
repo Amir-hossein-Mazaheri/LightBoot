@@ -27,32 +27,33 @@ function getRnd(min, max) {
 const accordion = (function () {
 
     for (let counter = 0; counter < accordions.length; counter++) {
-        
+
         //adds a unique injected-id attribute to each accordion
         accordions[counter].setAttribute('injected-id', '#ac' + (counter + 1));
-        
+
         //selects all of accordion items
         let accordionItems = document.querySelectorAll("[injected-id ='#ac" + (counter + 1) + "']" + " > *");
-        
+
         //for each item adds a 
         for (let i = 0; i < accordionItems.length; i++) {
-            
+
             //generate a random number
             let randomId = getRnd(0, accordionItems.length * 100);
-            
+
             //adds a unique injected-id attribute to each accordion item
             accordionItems[i].setAttribute('injected-id', '#acI' + (i + 1 + randomId))
-            
+
             //selects accordion item heading
             let accordionHeading = document.querySelector("[injected-id ='#acI" + (i + 1 + randomId) + "']" + "> .accordion-heading");
-            
+
             //selects accordion item content
             let accordionContent = document.querySelector("[injected-id ='#acI" + (i + 1 + randomId) + "']" + "> .accordion-content");
-            
+
             //adds event to each accordion heading
             accordionHeading.addEventListener('click', function () {
                 //toggle class active from accordion content and accordion heading itself
                 accordionContent.classList.toggle('active');
+                slideEffectOpen(accordionContent);
                 this.classList.toggle('active');
 
                 getSiblings(this.parentElement).forEach((value) => {
@@ -60,9 +61,13 @@ const accordion = (function () {
                     let $counter = value.children.length
 
                     for (let count = 0; count < $counter; count++) {
-                        value.children[count].classList.remove('active')
+                        if (value.children[count].classList.contains('accordion-heading')) {
+                            value.children[count].classList.remove('active')
+                        } else {
+                            slideEffectClose(value.children[count])
+                        }
                     }
-                    
+
                 })
             })
         }

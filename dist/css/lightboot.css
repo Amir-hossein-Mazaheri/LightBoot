@@ -2674,136 +2674,196 @@ address {
   display: none !important;
 }
 
-.dis-jc-s {
+.flex-jc-s {
   justify-content: flex-start !important;
 }
 
-.dis-jc-e {
+.flex-jc-e {
   justify-content: flex-end !important;
 }
 
-.dis-jc-b {
+.flex-jc-b {
   justify-content: baseline !important;
 }
 
-.dis-jc-c {
+.flex-jc-c {
   justify-content: center !important;
 }
 
-.dis-jc-r {
+.flex-jc-r {
   justify-content: right !important;
 }
 
-.dis-jc-l {
+.flex-jc-l {
   justify-content: left !important;
 }
 
-.dis-jc-sa {
+.flex-jc-sa {
   justify-content: space-around !important;
 }
 
-.dis-jc-sb {
+.flex-jc-sb {
   justify-content: space-between !important;
 }
 
-.dis-jc-se {
+.flex-jc-se {
   justify-content: space-evenly !important;
 }
 
-.dis-jc-st {
+.flex-jc-st {
   justify-content: stretch !important;
 }
 
-.dis-ai-s {
+.flex-ai-s {
   align-items: flex-start !important;
 }
 
-.dis-ai-e {
+.flex-ai-e {
   align-items: flex-end !important;
 }
 
-.dis-ai-b {
+.flex-ai-b {
   align-items: baseline !important;
 }
 
-.dis-ai-c {
+.flex-ai-c {
   align-items: center !important;
 }
 
-.dis-ai-st {
+.flex-ai-st {
   align-items: stretch !important;
 }
 
-.dis-as-s {
+.flex-as-s {
   align-self: flex-start !important;
 }
 
-.dis-as-e {
+.flex-as-e {
   align-self: flex-end !important;
 }
 
-.dis-as-b {
+.flex-as-b {
   align-self: baseline !important;
 }
 
-.dis-as-c {
+.flex-as-c {
   align-self: center !important;
 }
 
-.dis-as-n {
+.flex-as-n {
   align-self: normal !important;
 }
 
-.dis-as-st {
+.flex-as-st {
   align-self: stretch !important;
 }
 
-.dis-grow-1 {
+.flex-w {
+  flex-wrap: wrap !important;
+}
+
+.flex-nw {
+  flex-wrap: nowrap !important;
+}
+
+.flex-wr {
+  flex-wrap: wrap-reverse !important;
+}
+
+.flex-grow-1 {
   flex-grow: 1;
 }
 
-.dis-grow-2 {
+.flex-grow-2 {
   flex-grow: 2;
 }
 
-.dis-grow-3 {
+.flex-grow-3 {
   flex-grow: 3;
 }
 
-.dis-grow-4 {
+.flex-grow-4 {
   flex-grow: 4;
 }
 
-.dis-grow-5 {
+.flex-grow-5 {
   flex-grow: 5;
 }
 
-.dis-grow-6 {
+.flex-grow-6 {
   flex-grow: 6;
 }
 
-.dis-grow-7 {
+.flex-grow-7 {
   flex-grow: 7;
 }
 
-.dis-grow-8 {
+.flex-grow-8 {
   flex-grow: 8;
 }
 
-.dis-grow-9 {
+.flex-grow-9 {
   flex-grow: 9;
 }
 
-.dis-grow-10 {
+.flex-grow-10 {
   flex-grow: 10;
 }
 
-.dis-grow-11 {
+.flex-grow-11 {
   flex-grow: 11;
 }
 
-.dis-grow-12 {
+.flex-grow-12 {
   flex-grow: 12;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.order-4 {
+  order: 4;
+}
+
+.order-5 {
+  order: 5;
+}
+
+.order-6 {
+  order: 6;
+}
+
+.order-7 {
+  order: 7;
+}
+
+.order-8 {
+  order: 8;
+}
+
+.order-9 {
+  order: 9;
+}
+
+.order-10 {
+  order: 10;
+}
+
+.order-11 {
+  order: 11;
+}
+
+.order-12 {
+  order: 12;
 }
 
 .w-10 {
@@ -4787,7 +4847,6 @@ address {
 }
 .accordion-item .accordion-content:not(.active) {
   transition: 0.3s;
-  overflow: hidden;
   display: none;
 }
 
