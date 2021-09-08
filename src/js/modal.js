@@ -1,3 +1,6 @@
+// imports element selector functions
+import { __, _ } from './elementSelector.js';
+
 const modalToggler = __('[modal-open]');
 const modalFilter = document.createElement('div');
 modalFilter.classList.add('modal-filter');

@@ -1,10 +1,13 @@
-const closeButtons = document.querySelectorAll(".close-button");
+// imports element selector functions
+import { __, _ , _i} from './elementSelector.js';
+
+const closeButtons = __(".close-button");
 const countCloseButtons = closeButtons.length;
 
 let closeButton = (function () {
     for (let counter = 0; counter < countCloseButtons; counter++) {
         closeButtons[counter].setAttribute("id", "clsB" + (counter + 1));
-        let shouldBeClose = document.querySelector(document.getElementById("clsB" + (counter + 1)).getAttribute("data-for-close"))
+        let shouldBeClose = _(_i("clsB" + (counter + 1)).getAttribute("data-for-close"))
         let shouldBeCloseWidth = shouldBeClose.offsetWidth;
         let closeInterval = '700'
         //setting style to have special effect
@@ -12,7 +15,7 @@ let closeButton = (function () {
         shouldBeClose.style.transition = `${closeInterval}ms`;
         shouldBeClose.style.transform = 'none';
         //adds function, closeFunction for each closeButton
-        document.querySelector("#clsB" + (counter + 1)).addEventListener("click", closeFunction);
+        _("#clsB" + (counter + 1)).addEventListener("click", closeFunction);
 
         function closeFunction() {
             shouldBeClose.style.opacity = '0';

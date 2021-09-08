@@ -92,3 +92,5 @@ function slideEffectToggle(element) {
         slideEffectClose(element)
     }
 }
+
+export { getHeight, getPaddingTop, getPaddingBottom, slideEffectOpen, slideEffectClose, slideEffectToggle };

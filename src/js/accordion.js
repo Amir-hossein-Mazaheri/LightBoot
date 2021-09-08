@@ -1,7 +1,11 @@
-const accordionHeadings = document.querySelectorAll(".accordion-heading");
+// imports element selector functions
+import { __, _ } from './elementSelector.js';
+import { getHeight, getPaddingTop, getPaddingBottom, slideEffectOpen, slideEffectClose, slideEffectToggle } from './slideEffects.js'
+
+const accordionHeadings = __(".accordion-heading");
 const countAccordionHeading = accordionHeadings.length;
-const accordions = document.querySelectorAll(".accordion");
-const accordionContents = document.querySelectorAll('.accordion-content');
+const accordions = __(".accordion");
+const accordionContents = __('.accordion-content');
 
 //this function select an element siblings
 const getSiblings = function (elem) {
@@ -32,7 +36,7 @@ const accordion = (function () {
         accordions[counter].setAttribute('injected-id', '#ac' + (counter + 1));
 
         //selects all of accordion items
-        let accordionItems = document.querySelectorAll("[injected-id ='#ac" + (counter + 1) + "']" + " > *");
+        let accordionItems = __("[injected-id ='#ac" + (counter + 1) + "']" + " > *");
 
         //for each item adds a 
         for (let i = 0; i < accordionItems.length; i++) {

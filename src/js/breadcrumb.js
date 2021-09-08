@@ -1,3 +1,6 @@
+// imports element selector functions
+import { __, _ } from './elementSelector.js';
+
 const breadcrumb = _('.breadcrumb');
 const breadcrumbSteps = __('.breadcrumb-step');
 [].forEach.call(breadcrumbSteps, (item, index, array) => {

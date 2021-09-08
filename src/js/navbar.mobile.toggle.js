@@ -1,14 +1,17 @@
-const navbarToggler = document.querySelectorAll(".navbar-toggle");
+// imports element selector functions
+import { __, _, _i } from './elementSelector.js';
+
+const navbarToggler = __(".navbar-toggle");
 const countNavbar = navbarToggler.length;
 
 let navbarToggle = (function () {
     for (let counter = 0; counter < countNavbar; counter++) {
         navbarToggler[counter].setAttribute("id", "nvbT" + (counter + 1));
-        let navbarToggleMenu = document.querySelector(document.getElementById("nvbT" + (counter + 1)).getAttribute("data-toggle-menu"));
-        let navbarToggleLogo = document.querySelector(document.getElementById("nvbT" + (counter + 1)).getAttribute("data-toggle-logo"));
+        let navbarToggleMenu = _(_i("nvbT" + (counter + 1)).getAttribute("data-toggle-menu"));
+        let navbarToggleLogo = _(_i("nvbT" + (counter + 1)).getAttribute("data-toggle-logo"));
 
         //adds function dropDownToggle for each button
-        document.querySelector("#nvbT" + (counter + 1)).addEventListener("click", dropDownToggle);
+        _("#nvbT" + (counter + 1)).addEventListener("click", dropDownToggle);
         navbarToggler[counter].classList.add('center-y-by-pos');
 
         function dropDownToggle() {

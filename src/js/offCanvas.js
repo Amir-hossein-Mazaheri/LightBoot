@@ -1,5 +1,8 @@
-const body = document.querySelector('body');
-const canvasToggler = document.querySelectorAll('.canvasToggler');
+// imports element selector functions
+import { __, _, _i } from './elementSelector.js';
+
+const body = _('body');
+const canvasToggler = __('.canvasToggler');
 const canvasCount = canvasToggler.length;
 const canvasFilterContent = document.createElement('div'); // create a div
 canvasFilterContent.classList.add('filter'); // adds filter class to previous div
@@ -12,12 +15,12 @@ const canvas = (function () {
     canvasToggler[counter].setAttribute("id", "cv" + (counter + 1));
 
     //get canvas id from canvas toggler
-    let canvas = document.querySelector(document.getElementById("cv" + (counter + 1)).getAttribute('data-toggle-canvas'));
+    let canvas = __(_i("cv" + (counter + 1)).getAttribute('data-toggle-canvas'));
 
     let canvasWidth = canvas.offsetWidth; // get canvas width
 
     //adds a filter(the black effect) at the end of canvas-container
-    document.querySelector('.canvas-container').appendChild(canvasFilterContent);
+    _('.canvas-container').appendChild(canvasFilterContent);
 
     //adds transform to canvas depend of its width | note :canvas right should moves reverse
     if (canvas.classList.contains('canvas-right')) {
@@ -27,7 +30,7 @@ const canvas = (function () {
     }
 
     //set canvas toggler function to each canvas toggler
-    document.querySelector("#cv" + (counter + 1)).addEventListener("click", function () {
+    _("#cv" + (counter + 1)).addEventListener("click", function () {
 
       body.classList.toggle("overflow-h");
 

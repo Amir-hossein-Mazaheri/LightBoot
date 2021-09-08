@@ -1,9 +1,12 @@
-const toastToggle = document.querySelectorAll('[toast-toggle]');
+// imports element selector functions
+import { __, _, _i } from './elementSelector.js';
+
+const toastToggle = __('[toast-toggle]');
 let toastIsClicked = false;
 
 toastToggle.forEach(value => {
-    document.querySelector("body").classList.add('overflow-x-h');
-    const toast = document.querySelector(value.getAttribute('toast-toggle'));
+    _("body").classList.add('overflow-x-h');
+    const toast = _(value.getAttribute('toast-toggle'));
     const toastWidth = toast.offsetWidth;
     toast.style.opacity = '0';
 
@@ -62,7 +65,7 @@ const toast = function (toast_type = 'danger', toast_pos = 'bottom-left', toast_
         });
     }
 
-    document.querySelector('body').prepend(toastElm);
+    _('body').prepend(toastElm);
     toastEffect();
 
     setTimeout(() => {
