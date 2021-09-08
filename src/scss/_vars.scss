@@ -132,8 +132,7 @@ $responsiveDisplayClassesLimit: limited !default;
 
 //?------------------------------------typography------------------------------------//
 //font families
-$fontFamily: "Poppins",
-sans-serif !default;
+$fontFamily: "Poppins", sans-serif #{"/*rtl:'IRANSans, Tohoma, Arial, sans-serif'*/"} !default;
 
 //numbers fs classes
 $fsCount: 10 !default;
@@ -315,7 +314,7 @@ $alertPadding-y: 1.15em !default;
 $alertPadding-x: 1.3em !default;
 
 $alertFontSize: 0.95rem !default;
-$alertDirection: rtl !default;
+$alertDirection: ltr !default;
 
 //?------------------------------------buttons------------------------------------//
 //buttons
@@ -438,6 +437,7 @@ $offCanvasBodyPaddingMobile-y: 1.7em !default;
 $offCanvasBodyPadding-x: 1em !default;
 $offCanvasBodyPadding-y: 2.5em !default;
 
+//?------------------------------------close button------------------------------------//
 $offCanvasCloseButtonIconColor: rgba(0, 0, 0, 0.6) !default;
 $offCanvasCloseButtonIcon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='#{$offCanvasCloseButtonIconColor}' d='M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z'%3E%3C/path%3E%3C/svg%3E" !default;
 $offCanvasCloseButtonIconWidth: 1.9rem !default;
@@ -446,11 +446,10 @@ $offCanvasCloseButtonIconBorderColor: scale-color(map-get($themeColors, light),
 $blackness: 15%) !default;
 $offCanvasCloseButtonIconPadding: 0.3em !default;
 
-//?------------------------------------close button------------------------------------//
 $closeButtonIconColor: rgba(0, 0, 0, 0.68) !default;
 $closeButtonIconWidth: 1rem !default;
 $closeButtonIcon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='#{$closeButtonIconColor}' d='M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z'%3E%3C/path%3E%3C/svg%3E" !default;
-$closeButtonLeft: 1rem !default;
+$closeButtonRigt: 1rem !default;
 $closeButtonCenter-y: true !default;
 
 //?------------------------------------tab------------------------------------//
@@ -498,7 +497,7 @@ $accordionHeadingIconColor: rgba(black, 0.75);
 $accordionHeadingIcon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$accordionHeadingIconColor}' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E" !default;
 $accordionHeadingIconWidth: 1.5rem !default;
 $accordionHeadingIconHeight: $accordionHeadingIconWidth !default;
-$accordionHeadingIconLeft: 1.5em !default;
+$accordionHeadingIconRight: 1.5em !default;
 $accordionHeadingTransition: 0.3s !default;
 
 $accordionHeadingIconColorOnActive: rgba(white, 0.75) !default;
@@ -681,7 +680,7 @@ $blackness: 100%) !default;
 
 //?------------------------------------form select------------------------------------//
 $formSelectBackgroundImage: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !default;
-$formSelectBackgroundImagePosition: left 0.75rem center !default;
+$formSelectBackgroundImagePosition: right 0.75rem center !default;
 $formSelectBackgroundImageSize: 16px 12px !default;
 
 //?------------------------------------form group------------------------------------//
@@ -695,7 +694,7 @@ $formFloatingInputHeight: calc(3em + 10px) !default;
 $formFloatingInputPaddingSetOnFocus: 2em 1em 1em 1em !default;
 $formFloatingInputPlaceHolderColor: map-get($themeColors, white) !default;
 
-$formFloatingLabelRight: 1em !default;
+$formFloatingLabelLeft: 1em !default;
 
 $formFloatingLabelFontSizeOnFocus: 0.83rem !default;
 $formFloatingLabelFontWeightOnFocus: 700 !default;
@@ -707,7 +706,7 @@ $formFloatingLabelTransitionOnFocus-y: -20px !default;
 $formCheckboxInlineMarginLeft: 0.8rem !default;
 
 $formCheckboxInputSize: 1.3rem !default;
-$formCheckboxInputMarginLeft: 0.6rem !default;
+$formCheckboxInputMarginRight: 0.6rem !default;
 $formCheckboxInputCheckMarkIcon: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e" !default;
 
 $formCheckboxInputBackgroundColorOnCheck: $primary !default;
@@ -717,7 +716,7 @@ $formRadioInlineMarginLeft: $formCheckboxInlineMarginLeft !default;
 
 $formRadioInputSize: $formCheckboxInputSize !default;
 $formRadioInputBorderRadius: 90px !default;
-$formRadioInputMarginLeft: $formCheckboxInputMarginLeft !default;
+$formRadioInputMarginLeft: $formCheckboxInputMarginRight !default;
 
 $formRadioInputBorderWidthOnCheck: 6px !default;
 $formRadioInputBorderColorOnCheck: $formCheckboxInputBackgroundColorOnCheck !default;

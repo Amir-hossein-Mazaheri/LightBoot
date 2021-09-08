@@ -52,7 +52,7 @@
   }
 
   &-filter {
-    position: absolute;
+    position: fixed;
     inset: 0;
     background-color: $modalFilterBackgroundColor;
     z-index: -1;

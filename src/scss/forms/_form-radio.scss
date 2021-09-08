@@ -6,7 +6,7 @@
         appearance: none;
         position: relative;
         display: inline-block;
-        margin-left: $formRadioInputMarginLeft;
+        margin-right: $formRadioInputMarginLeft;
 
         &::before {
             content: '';

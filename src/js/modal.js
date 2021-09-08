@@ -1,10 +1,10 @@
 // imports element selector functions
-import { __, _ } from './elementSelector.js';
+import { __, _, _t } from './elementSelector.js';
 
 const modalToggler = __('[modal-open]');
 const modalFilter = document.createElement('div');
 modalFilter.classList.add('modal-filter');
-_('body').insertBefore(modalFilter, _('body').childNodes[1]);
+_('body').insertBefore(modalFilter, _('body').childNodes[0]);
 
 modalToggler.forEach(value => {
     const modal = _(value.getAttribute('modal-open'));

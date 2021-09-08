@@ -1,7 +1,7 @@
 %toast {
   padding: $toastPadding-y $toastPadding-x;
   font-size: $toastFontSize;
-  position: absolute;
+  position: fixed;
   border-radius: $toastBorderRadius;
   transition: transform $toastTransition $toastTransitionType,
   opacity $toastTransition + 0.3s $toastTransitionType;
@@ -20,20 +20,24 @@ $hex in $toastColors {
 
 .#{$toastPrefix}-bottom-right {
   bottom: $toastSpaceFromEdges-y;
+  /*rtl:ignore*/
   right: $toastSpaceFromEdges-x;
 }
 
 .#{$toastPrefix}-bottom-left {
   bottom: $toastSpaceFromEdges-y;
+  /*rtl:ignore*/
   left: $toastSpaceFromEdges-x;
 }
 
 .#{$toastPrefix}-top-right {
   top: $toastSpaceFromEdges-y;
+  /*rtl:ignore*/
   right: $toastSpaceFromEdges-x;
 }
 
 .#{$toastPrefix}-top-left {
   top: $toastSpaceFromEdges-y;
+  /*rtl:ignore*/
   left: $toastSpaceFromEdges-x;
 }

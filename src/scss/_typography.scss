@@ -2,7 +2,7 @@
 
 *,
 body {
-  font-family: $fontFamily;
+  font-family: $fontFamily/*rtl:"IRANSans, sans-serif"*/;
 }
 
 %display {
@@ -172,9 +172,10 @@ blockquote {
     background-color: scale-color($primary, $lightness: 0%);
     width: 3rem;
     height: 3rem;
-    float: right;
-    margin-left: 0.7rem;
+    float: left;
     border-radius: 3px;
+    margin-left: 0 #{"/*rtl:0.7rem*/"};
+    transform: rotateY(180deg) #{"/*rtl:remove*/"};
   }
 }
 

@@ -51,7 +51,7 @@
     }
   }
 
-  &-right {
+  &-left {
     .dropdown-menu {
       left: 100%;
       top: 0;
@@ -65,7 +65,7 @@
         display: none;
       }
 
-      &::before {
+      &::after {
         display: inline-block;
         content: "";
         @include triangle(top, currentColor, 0.3em);
@@ -75,7 +75,7 @@
     }
   }
 
-  &-left {
+  &-right {
     .dropdown-menu {
       right: 100%;
       top: 0;
@@ -86,8 +86,15 @@
 
     .dropdown-button {
       &::after {
-        transform: rotate(90deg);
+        display: none;
+      }
+
+      &::before {
+        display: inline-block;
+        content: "";
+        @include triangle(top, currentColor, 0.3em);
         margin-top: 0;
+        transform: rotate(90deg);
       }
     }
   }

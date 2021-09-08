@@ -41,7 +41,7 @@ $hex in $themeColors {
       content: url(map-get($alertSpecialIcons, $colorName));
       position: absolute;
       top: 50%;
-      left: 2em;
+      right: 2em;
       transform: translateY(-50%) scale(2);
       line-height: 0;
     }
@@ -50,11 +50,11 @@ $hex in $themeColors {
 }
 
 .#{$alertPrefix}-with-close {
-  padding-right: 4.5em;
+  padding-left: 4.5em;
 
   &::after {
-    right: 2em;
-    left: unset;
+    left: 2em;
+    right: unset;
   }
 
   & > .close-button {

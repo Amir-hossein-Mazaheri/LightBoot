@@ -6,7 +6,7 @@
          appearance: none;
          position: relative;
          display: inline-block;
-         margin-left: $formCheckboxInputMarginLeft;
+         margin-right: $formCheckboxInputMarginRight;
      
          &::before {
              content: '';

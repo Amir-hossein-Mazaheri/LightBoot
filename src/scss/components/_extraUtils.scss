@@ -8,6 +8,7 @@
 //floats
 @each $title, $value in $floats {
   .#{$floatPrefix}-#{$title} {
+    /*rtl:ignore*/
     float: $value !important;
   }
 }
@@ -28,6 +29,7 @@
   .center-by-pos {
     position: absolute !important;
     top: 50% !important;
+    /*rtl:ignore*/
     left: 50% !important;
     transform: translate(-50%, -50%) !important
   }
@@ -35,6 +37,7 @@
 
   .center-x-by-pos {
     position: absolute !important;
+    /*rtl:ignore*/
     left: 50% !important;
     transform: translateX(-50%) !important;
   }
@@ -121,12 +124,14 @@
     top: $TRBLStep * $i * 1% !important;
   }
   .r-#{$i * $TRBLStep} {
+    /*rtl:ignore*/
     right: $TRBLStep * $i * 1% !important;
   }
   .b-#{$i * $TRBLStep} {
     bottom: $TRBLStep * $i * 1% !important;
   }
   .l-#{$i * $TRBLStep} {
+    /*rtl:ignore*/
     left: $TRBLStep * $i * 1% !important;
   }
 }

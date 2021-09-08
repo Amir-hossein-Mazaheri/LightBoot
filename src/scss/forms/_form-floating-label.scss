@@ -22,7 +22,7 @@
         &:placeholder-shown+label {
             position: absolute;
             top: 50%;
-            right: $formFloatingLabelRight;
+            left: $formFloatingLabelLeft;
             pointer-events: none;
             transform: translateY(-50%);
             transition: $formInputTransition;
@@ -31,7 +31,7 @@
         &:focus+label, &:not(:placeholder-shown)+label {
             position: absolute;
             top: 50%;
-            right: 1rem;
+            left: 1rem;
             transform: translate($formFloatingLabelTransitionOnFocus-x, $formFloatingLabelTransitionOnFocus-y);
             font-size: $formFloatingLabelFontSizeOnFocus;
             font-weight: $formFloatingLabelFontWeightOnFocus;

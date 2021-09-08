@@ -11,6 +11,7 @@
   position: fixed;
   top: 0;
   bottom: 0;
+  /*rtl:ignore*/
   left: 0;
   min-width: $offCanvasMinWidth;
   width: $offCanvasWidth;
@@ -46,7 +47,7 @@
   position: absolute;
   font-size: initial;
   top: 50%;
-  left: 1rem;
+  right: 1rem;
   transform: translateY(-50%);
 
   &::after {
@@ -66,6 +67,8 @@
 }
 
 .canvas-right {
+  /*rtl:ignore*/
   right: 0;
+  /*rtl:ignore*/
   left: unset;
 }

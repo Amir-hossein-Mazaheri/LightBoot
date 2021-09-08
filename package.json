@@ -1,13 +1,14 @@
 {
   "name": "lightboot-framework",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "a front end framework",
   "main": "index.js",
   "scripts": {
     "sass": "sass src/scss/lightboot.scss:dist/css/lightboot.css --watch",
     "sassMin": "sass src/scss/lightboot.scss:dist/css/lightboot.min.css --watch --style compressed",
     "sassGrid": "sass src/scss/grid/:dist/css/ --watch",
-    "sassGridMin": "sass src/scss/grid/:dist/css/ --watch --style compressed"
+    "sassGridMin": "sass src/scss/grid/:dist/css/ --watch --style compressed",
+    "rtl": "rtlcss dist/css/lightboot.css dist/css/rtl/lightboot.rtl.css"
   },
   "repository": {
     "type": "git",

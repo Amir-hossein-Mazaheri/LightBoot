@@ -1,227 +1,245 @@
 //paddings
 
 //padding child
-@for $i from 0 to map-get($spacingRange, padding){
-    .p-child-#{$i} > *{
-        padding: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .p-child-#{$i} > * {
+    padding: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .pr-child-#{$i} > *{
-        padding-right: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .pr-child-#{$i} > * {
+    /*rtl:ignore*/
+    padding-right: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .pl-child-#{$i} > *{
-        padding-left: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .pl-child-#{$i} > * {
+    /*rtl:ignore*/
+    padding-left: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .pt-child-#{$i} > *{
-        padding-top: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .pt-child-#{$i} > * {
+    padding-top: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .pb-child-#{$i} > *{
-        padding-bottom: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .pb-child-#{$i} > * {
+    padding-bottom: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .py-child-#{$i} > *{
-        padding-bottom: $sm-spacing * $i !important;
-        padding-top: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .py-child-#{$i} > * {
+    padding-bottom: $sm-spacing * $i !important;
+    padding-top: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .px-child-#{$i} > *{
-        padding-right: $sm-spacing * $i !important;
-        padding-left: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .px-child-#{$i} > * {
+    /*rtl:ignore*/
+    padding-right: $sm-spacing * $i !important;
+    /*rtl:ignore*/
+    padding-left: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .p-#{$i}{
-        padding: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .p-#{$i} {
+    padding: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .pr-#{$i}{
-        padding-right: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .pr-#{$i} {
+    /*rtl:ignore*/
+    padding-right: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .pl-#{$i}{
-        padding-left: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .pl-#{$i} {
+    /*rtl:ignore*/
+    padding-left: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .pt-#{$i}{
-        padding-top: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .pt-#{$i} {
+    padding-top: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .pb-#{$i}{
-        padding-bottom: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .pb-#{$i} {
+    padding-bottom: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .py-#{$i}{
-        padding-bottom: $sm-spacing * $i !important;
-        padding-top: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .py-#{$i} {
+    padding-bottom: $sm-spacing * $i !important;
+    padding-top: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, padding){
-    .px-#{$i}{
-        padding-right: $sm-spacing * $i !important;
-        padding-left: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, padding) {
+  .px-#{$i} {
+    /*rtl:ignore*/
+    padding-right: $sm-spacing * $i !important;
+    /*rtl:ignore*/
+    padding-left: $sm-spacing * $i !important;
+  }
 }
 
 //margins
 //margin child
-@for $i from 0 to map-get($spacingRange, margin){
-    .m-child-#{$i} > *{
-        margin: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .m-child-#{$i} > * {
+    margin: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .mr-child-#{$i} > *{
-        margin-right: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .mr-child-#{$i} > * {
+    /*rtl:ignore*/
+    margin-right: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .ml-child-#{$i} > *{
-        margin-left: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .ml-child-#{$i} > * {
+    /*rtl:ignore*/
+    margin-left: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .mt-child-#{$i} > *{
-        margin-top: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .mt-child-#{$i} > * {
+    margin-top: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .mb-child-#{$i} > *{
-        margin-bottom: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .mb-child-#{$i} > * {
+    margin-bottom: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .my-child-#{$i} > *{
-        margin-bottom: $sm-spacing * $i !important;
-        margin-top: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .my-child-#{$i} > * {
+    margin-bottom: $sm-spacing * $i !important;
+    margin-top: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .mx-child-#{$i} > *{
-        margin-right: $sm-spacing * $i !important;
-        margin-left: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .mx-child-#{$i} > * {
+    /*rtl:ignore*/
+    margin-right: $sm-spacing * $i !important;
+    /*rtl:ignore*/
+    margin-left: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .m-#{$i}{
-        margin: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .m-#{$i} {
+    margin: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .mr-#{$i}{
-        margin-right: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .mr-#{$i} {
+    /*rtl:ignore*/
+    margin-right: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .ml-#{$i}{
-        margin-left: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .ml-#{$i} {
+    /*rtl:ignore*/
+    margin-left: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .mt-#{$i}{
-        margin-top: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .mt-#{$i} {
+    margin-top: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .mb-#{$i}{
-        margin-bottom: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .mb-#{$i} {
+    margin-bottom: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .my-#{$i}{
-        margin-bottom: $sm-spacing * $i !important;
-        margin-top: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .my-#{$i} {
+    margin-bottom: $sm-spacing * $i !important;
+    margin-top: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 0 to map-get($spacingRange, margin){
-    .mx-#{$i}{
-        margin-right: $sm-spacing * $i !important;
-        margin-left: $sm-spacing * $i !important;
-    }
+@for $i from 0 to map-get($spacingRange, margin) {
+  .mx-#{$i} {
+    /*rtl:ignore*/
+    margin-right: $sm-spacing * $i !important;
+    /*rtl:ignore*/
+    margin-left: $sm-spacing * $i !important;
+  }
 }
 
 //auto margins
-.mr-auto{
-    margin-right: auto !important;
+.mr-auto {
+  /*rtl:ignore*/
+  margin-right: auto !important;
 }
 
-.ml-auto{
-    margin-left: auto !important;
+.ml-auto {
+  /*rtl:ignore*/
+  margin-left: auto !important;
 }
 
-.mt-auto{
-    margin-top: auto !important;
+.mt-auto {
+  margin-top: auto !important;
 }
 
-.mb-auto{
-    margin-bottom: auto !important;
+.mb-auto {
+  margin-bottom: auto !important;
 }
 
-.mx-auto{
-    margin-right: auto !important;
-    margin-left: auto !important;
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
 
-.my-auto{
-    margin-top: auto !important;
-    margin-bottom: auto !important;
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
 }
 
 //gap
-@for $i from 1 to map-get($spacingRange, gap) + 1{
-    .gap-#{$i}{
-        gap: $sm-spacing * $i !important;
-    }
+@for $i from 1 to map-get($spacingRange, gap) + 1 {
+  .gap-#{$i} {
+    gap: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 1 to map-get($spacingRange, gap) + 1{
-    .gap-r-#{$i}{
-        row-gap: $sm-spacing * $i !important;
-    }
+@for $i from 1 to map-get($spacingRange, gap) + 1 {
+  .gap-r-#{$i} {
+    row-gap: $sm-spacing * $i !important;
+  }
 }
 
-@for $i from 1 to map-get($spacingRange, gap) + 1{
-    .gap-c-#{$i}{
-        column-gap: $sm-spacing * $i !important;
-    }
+@for $i from 1 to map-get($spacingRange, gap) + 1 {
+  .gap-c-#{$i} {
+    column-gap: $sm-spacing * $i !important;
+  }
 }
 

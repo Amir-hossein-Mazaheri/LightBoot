@@ -15,7 +15,7 @@ const canvas = (function () {
     canvasToggler[counter].setAttribute("id", "cv" + (counter + 1));
 
     //get canvas id from canvas toggler
-    let canvas = __(_i("cv" + (counter + 1)).getAttribute('data-toggle-canvas'));
+    let canvas = _(_i("cv" + (counter + 1)).getAttribute('data-toggle-canvas'));
 
     let canvasWidth = canvas.offsetWidth; // get canvas width
 

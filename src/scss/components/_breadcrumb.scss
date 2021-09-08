@@ -14,7 +14,7 @@
     padding: 1em 1.5em 1em 2.5em;
     cursor: pointer;
     z-index: 2;
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 51%, 0% 0%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 51%, 0% 0%) #{ "/*rtl:polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);*/"};
 
     &::before {
       content: counter(flag);

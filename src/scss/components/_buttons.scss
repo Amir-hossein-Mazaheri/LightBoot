@@ -91,7 +91,6 @@ $value in $themeColors {
   @each $title,
   $value in $themeColors {
     .#{$btnPrefix}-neon-#{$title} {
-      font-size: 1.3rem;
       display: inline-block;
       cursor: pointer;
       text-decoration: none;

@@ -36,7 +36,7 @@
       display: inline-block;
       position: absolute;
       top: 50%;
-      left: $accordionHeadingIconLeft;
+      right: $accordionHeadingIconRight;
       transform: translateY(-50%);
       transition: $accordionHeadingTransition;
     }
