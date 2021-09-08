@@ -17,3 +17,5 @@ function _c(element_class) {
 function _t(tag) {
     return document.getElementsByTagName(tag);
 }
+
+// export {_ , __, _c, _i, _t};

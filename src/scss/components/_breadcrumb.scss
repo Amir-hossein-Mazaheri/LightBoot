@@ -1,0 +1,45 @@
+.breadcrumb {
+  display: inline-flex;
+  box-shadow: 0 0 1rem 7px scale-color(map-get($themeColors, light), $blackness: 15%);
+  overflow: hidden;
+  border-radius: 5px;
+  counter-reset: flag;
+  font-size: .96rem;
+
+  &-step {
+    background-color: map-get($themeColors, white);
+    color: $primary;
+    position: relative;
+    display: flex;
+    padding: 1em 1.5em 1em 2.5em;
+    cursor: pointer;
+    z-index: 2;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 51%, 0% 0%);
+
+    &::before {
+      content: counter(flag);
+      counter-increment: flag;
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transform: translate(30%, -50%);
+      border-right: 1px solid scale-color(map-get($themeColors, light), $blackness: 40%);
+      padding: 0 0.4rem;
+    }
+
+    &.active {
+      color: map-get($themeColors, white);
+      background-color: $primary;
+    }
+
+    &.activated {
+      clip-path: none;
+      background-color: $primary;
+      color: white;
+    }
+
+  }
+
+}

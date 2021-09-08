@@ -1,18 +1,18 @@
 @each $title, $value in $borders {
-    .#{$borderPrefix}-#{$title}{
-        border: $value solid $defaultBorderColor !important;
-    }
+  .#{$borderPrefix}-#{$title} {
+    border: $value solid $defaultBorderColor !important;
+  }
 }
 
 @each $title, $value in $themeColors {
-    .#{$borderPrefix}-#{$title}{
-        border-color: $value !important;
-    }
+  .#{$borderPrefix}-#{$title} {
+    border-color: $value !important;
+  }
 }
 
 @each $title, $value in $border-radius {
-    .#{$BRPrefix}-#{$title}{
-        border-radius: $value !important;
-    }
+  .#{$BRPrefix}-#{$title} {
+    border-radius: $value !important;
+  }
 }
 

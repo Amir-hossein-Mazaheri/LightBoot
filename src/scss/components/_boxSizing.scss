@@ -1,15 +1,15 @@
 @for $i from 1 to $boxSizingCount + 1 {
 
-    .w-#{$i * $boxSizingStep}{
-        width: ($i * $boxSizingStep ) * 1%  !important;
-    }
+  .w-#{$i * $boxSizingStep} {
+    width: ($i * $boxSizingStep ) * 1% !important;
+  }
 
-    .min-w-#{$i * $boxSizingStep}{
-        min-width: ($i * $boxSizingStep ) * 1%  !important;
-    }
+  .min-w-#{$i * $boxSizingStep} {
+    min-width: ($i * $boxSizingStep ) * 1% !important;
+  }
 
-    .max-w-#{$i * $boxSizingStep}{
-        max-width: ($i * $boxSizingStep ) * 1%  !important;
-    }
+  .max-w-#{$i * $boxSizingStep} {
+    max-width: ($i * $boxSizingStep ) * 1% !important;
+  }
 
 }

@@ -1,15 +1,15 @@
 .close-button {
-    &::after {
-        content: url($closeButtonIcon);
-        display: inline-block;
-        position: absolute;
-        @if $closeButtonCenter-y==true {
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        left: $closeButtonLeft;
-        line-height: 0;
-        width: $closeButtonIconWidth;
-        cursor: pointer;
+  &::after {
+    content: url($closeButtonIcon);
+    display: inline-block;
+    position: absolute;
+    @if $closeButtonCenter-y==true {
+      top: 50%;
+      transform: translateY(-50%);
     }
+    left: $closeButtonLeft;
+    line-height: 0;
+    width: $closeButtonIconWidth;
+    cursor: pointer;
+  }
 }

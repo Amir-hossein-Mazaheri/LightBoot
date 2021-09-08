@@ -1,29 +1,29 @@
 .board {
-    box-shadow: 0 0 $boardShadowBlur scale-color(map-get($themeColors, light), $blackness : $boardShadowDarkPercentage);
-    background-color: map-get($themeColors, white);
-    transition: 0.3s;
+  box-shadow: 0 0 $boardShadowBlur scale-color(map-get($themeColors, light), $blackness: $boardShadowDarkPercentage);
+  background-color: map-get($themeColors, white);
+  transition: 0.3s;
 
-    .board-img {
-        max-width: 100%;
-        height: auto;
-    }
+  .board-img {
+    max-width: 100%;
+    height: auto;
+  }
 
-    .board-body {
-        padding: $boardBodyPadding-y $boardBodyPadding-x;
-        line-height: $boardBodyLineHeight;
-        
-        .board-title {
-            margin-bottom: $boardBodyTitleMargin;
-            line-height: $boardBodyTitleLineHeight;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-    }
+  .board-body {
+    padding: $boardBodyPadding-y $boardBodyPadding-x;
+    line-height: $boardBodyLineHeight;
 
-    @if $boardHoverAbility == true{
-        &:hover {
-            transform: scale(1.1);
-        }
+    .board-title {
+      margin-bottom: $boardBodyTitleMargin;
+      line-height: $boardBodyTitleLineHeight;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
     }
+  }
+
+  @if $boardHoverAbility == true {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }

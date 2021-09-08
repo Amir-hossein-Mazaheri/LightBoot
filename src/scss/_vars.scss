@@ -602,40 +602,45 @@ $modalFilterTransition: 0.3s !default;
 $modalFilterTransitionType: linear !default;
 
 //?------------------------------------pagination------------------------------------//
-$paginationGap: 0.5rem;
-$paginationPadding-y: 0.3em;
-$paginationPadding-x: 1.7em;
+$paginationGap: 0.5rem !default;
+$paginationPadding-y: 0.3em !default;
+$paginationPadding-x: 1.7em !default;
 
-$paginationBackgroundColor: map-get($themeColors, white);
+$paginationBackgroundColor: map-get($themeColors, white) !default;
 
-$paginationBoxShadowBlur: 1rem;
-$paginationBoxShadowSpread: 7px;
-$paginationBoxShadowColor: scale-color(map-get($themeColors, light), $blackness: 17%);
+$paginationBoxShadowBlur: 1rem !default;
+$paginationBoxShadowSpread: 7px !default;
+$paginationBoxShadowColor: scale-color(map-get($themeColors, light), $blackness: 17%) !default;
 
-$paginationBorderRadius: 5px;
+$paginationBorderRadius: 5px !default;
 
-$paginationItemPadding-y: 0.8em;
-$paginationItemPadding-x: 1.3em;
+$paginationItemPadding-y: 0.8em !default;
+$paginationItemPadding-x: 1.3em !default;
 
-$paginationItemBorderRadius: 3px;
+$paginationItemBorderRadius: 3px !default;
 
-$paginationItemZIndex: 3;
+$paginationItemZIndex: 3 !default;
 
-$paginationActiveItemBackgroundColor: $primary;
-$paginationActiveItemColor: map-get($themeColors, white);
+$paginationActiveItemBackgroundColor: $primary !default;
+$paginationActiveItemColor: map-get($themeColors, white) !default;
 
-$paginationBeforeBackgroundColor: $primary;
-$paginationBeforeZIndex: 2;
-$paginationBeforeTransition: 0.3s;
-$paginationBeforeTransitionType: ease-in-out;
+$paginationBeforeBackgroundColor: $primary !default;
+$paginationBeforeZIndex: 2 !default;
+$paginationBeforeTransition: 0.3s !default;
+$paginationBeforeTransitionType: ease-in-out !default;
 
 // if you dont like the effect you can set this to false!
-$paginationHoverEffect: true;
+$paginationHoverEffect: true !default;
 
-$paginationColorOnHover: map-get($themeColors, white);
+$paginationColorOnHover: map-get($themeColors, white) !default;
 
-$paginationActiveItemBackgroundColorOnHover: map-get($themeColors, white);
-$paginationActiveItemColorOnHover: map-get($themeColors, black);
+$paginationActiveItemBackgroundColorOnHover: map-get($themeColors, white) !default;
+$paginationActiveItemColorOnHover: map-get($themeColors, black) !default;
+
+//?------------------------------------breadcrumb------------------------------------//
+
+
+
 
 //*------------------------------------------------------------------------------------////
 //*---------------------------------------- form ---------------------------------------//

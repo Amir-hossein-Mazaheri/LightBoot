@@ -1,79 +1,79 @@
 .modal {
-    position: fixed;
-    max-width: 600px;
-    width: 90%;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    padding: $modalPadding-y $modalPadding-x;
-    box-shadow: 0 0 $modalBoxShadowBlur $modalBoxShadowColor;
-    background-color: $modalBackgroundColor;
-    border-radius: $modalBorderRadius;
+  position: fixed;
+  max-width: 600px;
+  width: 90%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  padding: $modalPadding-y $modalPadding-x;
+  box-shadow: 0 0 $modalBoxShadowBlur $modalBoxShadowColor;
+  background-color: $modalBackgroundColor;
+  border-radius: $modalBorderRadius;
+  z-index: -1;
+  opacity: 0;
+  transition: $modalTransition $modalTransitionType;
+
+  &-heading {
+    position: relative;
+    font-size: $modalHeadingFontSize;
+    font-weight: $modalHeadingFontWeight;
+    padding-top: $modalHeadingPaddingTop;
+    padding-bottom: $modalHeadingPaddingBottom;
+    margin-bottom: $modalHeadingMarginBottom;
+    border-bottom: $modalHeadingBorderBottomWidth $modalHeadingBorderBottomType $modalHeadingBorderBottomColor;
+  }
+
+  &-content {
+    line-height: $modalContentLineHeight;
+    color: $modalContentColor;
+  }
+
+  &-close {
+    display: none;
+
+    &::before {
+      content: url($modalCloseIcon);
+      position: absolute;
+      top: $modalCloseTop;
+      right: $modalCloseRight;
+      width: $modalCloseWidth;
+      line-height: 0;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+
+  &-footer {
+    padding-top: $modalFooterPaddingTop;
+    padding-bottom: $modalFooterPaddingBottom;
+    margin-top: $modalFooterMarginTop;
+    border-top: $modalFooterBorderTopWidth $modalFooterBorderTopType $modalFooterBorderTopColor;
+
+  }
+
+  &-filter {
+    position: absolute;
+    inset: 0;
+    background-color: $modalFilterBackgroundColor;
     z-index: -1;
     opacity: 0;
-    transition: $modalTransition $modalTransitionType;
+    transition: opacity $modalFilterTransition $modalFilterTransitionType;
+  }
 
-    &-heading {
-        position: relative;
-        font-size: $modalHeadingFontSize;
-        font-weight: $modalHeadingFontWeight;
-        padding-top: $modalHeadingPaddingTop;
-        padding-bottom: $modalHeadingPaddingBottom;
-        margin-bottom: $modalHeadingMarginBottom;
-        border-bottom: $modalHeadingBorderBottomWidth $modalHeadingBorderBottomType $modalHeadingBorderBottomColor;
-    }
+  &-center {
+    transform: translate(-50%, -50%);
+  }
 
-    &-content {
-        line-height: $modalContentLineHeight;
-        color: $modalContentColor;
-    }
+  &-bottom {
+    transform: translate(-50%, -85%);
+  }
 
-    &-close {
-        display: none;
+  &-lg {
+    max-width: 800px;
+  }
 
-        &::before {
-            content: url($modalCloseIcon);
-            position: absolute;
-            top: $modalCloseTop;
-            right: $modalCloseRight;
-            width: $modalCloseWidth;
-            line-height: 0;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
-    }
-
-    &-footer {
-        padding-top: $modalFooterPaddingTop;
-        padding-bottom: $modalFooterPaddingBottom;
-        margin-top: $modalFooterMarginTop;
-        border-top: $modalFooterBorderTopWidth $modalFooterBorderTopType $modalFooterBorderTopColor;
-
-    }
-
-    &-filter {
-        position: absolute;
-        inset: 0;
-        background-color: $modalFilterBackgroundColor;
-        z-index: -1;
-        opacity: 0;
-        transition: opacity $modalFilterTransition $modalFilterTransitionType;
-    }
-
-    &-center {
-        transform: translate(-50%, -50%);
-    }
-
-    &-bottom {
-        transform: translate(-50%, -85%);
-    }
-
-    &-lg {
-        max-width: 800px;
-    }
-
-    &-sm {
-        max-width: 400px;
-    }
+  &-sm {
+    max-width: 400px;
+  }
 
 }

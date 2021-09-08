@@ -1,71 +1,71 @@
 .filter {
-    background-color: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    inset: 0;
-    opacity: 0;
-    z-index: -1;
-    transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.5s;
 }
 
 .canvas {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    min-width: $offCanvasMinWidth;
-    width: $offCanvasWidth;
-    background-color: white;
-    opacity: 0;
-    z-index: -1;
-    transition: $offCanvasDelay;
-    overflow-y: $offCanvasOverFlow-y;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  min-width: $offCanvasMinWidth;
+  width: $offCanvasWidth;
+  background-color: white;
+  opacity: 0;
+  z-index: -1;
+  transition: $offCanvasDelay;
+  overflow-y: $offCanvasOverFlow-y;
 }
 
 .canvas > .canvas-holder {
-    line-height: $offCanvasHolderLineHeight;
-    
-    & > .canvas-heading {
-        position: relative;
-        font-size: $offCanvasHeadingFontSize;
-        padding: $offCanvasHeadingPaddingTop $offCanvasHeadingPaddingRight $offCanvasHeadingPaddingBottom  $offCanvasHeadingPaddingLeft;
-        border-bottom: 1px solid map-get($themeColors, light);
-    }
+  line-height: $offCanvasHolderLineHeight;
 
+  & > .canvas-heading {
+    position: relative;
+    font-size: $offCanvasHeadingFontSize;
+    padding: $offCanvasHeadingPaddingTop $offCanvasHeadingPaddingRight $offCanvasHeadingPaddingBottom $offCanvasHeadingPaddingLeft;
+    border-bottom: 1px solid map-get($themeColors, light);
+  }
+
+  & > .canvas-body {
+    padding: $offCanvasBodyPaddingMobile-x $offCanvasBodyPaddingMobile-y;
+  }
+
+  @include mediaQueryUp($offCanvasBodyBreakPoint) {
     & > .canvas-body {
-        padding: $offCanvasBodyPaddingMobile-x $offCanvasBodyPaddingMobile-y;
+      padding: $offCanvasBodyPadding-x $offCanvasBodyPadding-y;
     }
-
-    @include mediaQueryUp($offCanvasBodyBreakPoint){
-        & > .canvas-body {
-            padding: $offCanvasBodyPadding-x $offCanvasBodyPadding-y;
-        }
-    }
+  }
 }
 
 .canvas-close {
-    position: absolute;
-    font-size: initial;
-    top: 50%;
-    left: 1rem;
-    transform: translateY(-50%);
-    
-    &::after {
-        border: $offCanvasCloseButtonIconBorderWidth solid $offCanvasCloseButtonIconBorderColor;
-        padding: $offCanvasCloseButtonIconPadding;
-        line-height: 0;
-        border-radius: 5px;
-        content: url($offCanvasCloseButtonIcon);
-        display: inline-block;
-        width: $offCanvasCloseButtonIconWidth;
-        cursor: pointer;
-    }
+  position: absolute;
+  font-size: initial;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+
+  &::after {
+    border: $offCanvasCloseButtonIconBorderWidth solid $offCanvasCloseButtonIconBorderColor;
+    padding: $offCanvasCloseButtonIconPadding;
+    line-height: 0;
+    border-radius: 5px;
+    content: url($offCanvasCloseButtonIcon);
+    display: inline-block;
+    width: $offCanvasCloseButtonIconWidth;
+    cursor: pointer;
+  }
 }
 
 .overflow-h {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .canvas-right {
-    right: 0;
-    left: unset;
+  right: 0;
+  left: unset;
 }
