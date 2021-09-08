@@ -93,7 +93,7 @@
     /*rtl:ignore*/
     margin-right: 0.3rem;
     top: 50%;
-    transform: translateY(-50%) rotate(90deg);
+    transform: translateY(-50%) rotate(-90deg)#{"/*!rtl:translateY(-50%) rotate(-90deg);*/"};
   }
 
   &:hover::before,
@@ -121,7 +121,7 @@
     /*rtl:ignore*/
     margin-left: 0.3rem;
     top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
+    transform: translateY(-50%) rotate(90deg)#{"/*!rtl:translateY(-50%) rotate(90deg);*/"};
   }
 
   &:hover::before,

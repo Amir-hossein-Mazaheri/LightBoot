@@ -4808,7 +4808,7 @@ address {
   /*rtl:ignore*/
   margin-right: 0.3rem;
   top: 50%;
-  transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(-90deg) /*!rtl:translateY(-50%) rotate(-90deg);*/;
 }
 [tooltip-position=left]:hover::before, [tooltip-position=left]:hover::after {
   opacity: 1;
@@ -4831,7 +4831,7 @@ address {
   /*rtl:ignore*/
   margin-left: 0.3rem;
   top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(90deg) /*!rtl:translateY(-50%) rotate(90deg);*/;
 }
 [tooltip-position=right]:hover::before, [tooltip-position=right]:hover::after {
   opacity: 1;
