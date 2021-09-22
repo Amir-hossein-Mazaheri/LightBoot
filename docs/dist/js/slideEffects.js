@@ -39,11 +39,7 @@ function slideEffectOpen(element) {
     element.style.height = height + "px";
     element.style.paddingTop = paddingTop + "px";
     element.style.paddingBottom = paddingBottom + "px";
-    let int = setInterval(() => {
-        for (let i = 0; i < 5000; i++) {
-            increaseHeight();
-        }
-    }, 0);
+    let int = setInterval(increaseHeight, 0);
 
     function increaseHeight() {
         if (height != elmHeight) {
@@ -72,11 +68,7 @@ function slideEffectClose(element) {
     let height = elmHeight;
     let paddingTop = elmPaddingT;
     let paddingBottom = elmPaddingB;
-    let int = setInterval(() => {
-        for (let i = 0; i < 5000; i++) {
-            decreaseHeight();
-        }
-    }, 0);
+    let int = setInterval(decreaseHeight, 0);
 
     function decreaseHeight() {
         height--;

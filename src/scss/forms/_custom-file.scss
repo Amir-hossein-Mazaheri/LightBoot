@@ -1,0 +1,12 @@
+[type=file].f-custom {
+    visibility: hidden;
+    
+   & + label, label + & {
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        padding: 1rem;
+        border: 1px dashed var(--lb-clr-primary);
+    }
+}
